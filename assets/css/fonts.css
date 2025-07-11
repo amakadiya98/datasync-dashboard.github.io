@@ -34,5 +34,5 @@
 }
 
 body {
-  font-family: 'Gilroy';
+  font-family: 'Gilroy' !important;
 }

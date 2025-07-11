@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DataSync</title>
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../assets/css/fonts.css" />
+    <link rel="stylesheet" href="../assets/css/chartStyle.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="title">Sipariş Durumu <strong>(Satış)</strong></div>
+            <button class="refresh-btn" onclick="location.reload()">
+                <span class="material-icons">refresh</span>
+            </button>
+        </div>
+        <div class="underline_div"></div>
+        <div class="order-tabs-container">
+            <div class="tabs">
+                <button class="tab active" data-type="sales">Satış</button>
+                <button class="tab" data-type="count">Adet</button>
+                <button class="tab" data-type="profit">Net Kar</button>
+            </div>
+        </div>
+        <div class="underline_div"></div>
+        <div class="chart-area">
+            <canvas id="salesChart"></canvas>
+        </div>
+    </div>
+
+    <div class="container" style="margin-top: 40px">
+        <div class="header">
+            <div class="title">Genel Stok Sağlık</div>
+            <button class="refresh-btn" onclick="location.reload()">
+                <span class="material-icons">refresh</span>
+            </button>
+        </div>
+        <div class="underline_div"></div>
+        <div class="stock-tabs-container">
+            <div class="tabs">
+                <button class="tab" data-type="table">Tablo</button>
+                <button class="tab active" data-type="graph">Grafik</button>
+            </div>
+        </div>
+        <div class="underline_div"></div>
+        <div class="chart-wrapper">
+            <div id="graphView">
+                <canvas id="stockHealthChart"></canvas>
+            </div>
+            <div id="tableView">
+                Table
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container" style="margin-top: 40px; max-width: 400px;">
+        <div class="title" style="text-align: center;">Stok Durum Puanı (%)</div>
+        <div class="underline_div"></div>
+        <div class="chart-area" style="height: 300px;">
+            <canvas id="stockScoreChart"></canvas>
+        </div>
+
+        <div class="donut-legend">
+            <div class="box"><span class="dot blue-dark"></span> Kritik Envanter</div>
+            <div class="box"><span class="dot orange"></span> Normal Envanter</div>
+            <div class="box"><span class="dot blue-light"></span> Stokta Yok</div>
+            <div class="box"><span class="dot gray"></span> Fazla Stokta</div>
+        </div>
+    </div>
+
+    <div class="container" style="margin-top: 40px;">
+        <div class="header">
+            <div class="title">Zaman Dilimi</div>
+            <button class="refresh-btn" onclick="location.reload()">
+                <span class="material-icons">refresh</span>
+            </button>
+        </div>
+        <div class="underline_div"></div>
+        <div class="chart-area" style="height: 350px;">
+            <canvas id="timeSeriesChart"></canvas>
+        </div>
+    </div>
+
+    <script src="../assets/js/sales-order.js"></script>
+    <script src="../assets/js/stock-health.js"></script>
+    <script src="../assets/js/stock-score.js"></script>
+    <script src="../assets/js/time-series.js"></script>
+</body>
+
+</html>
