@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Datasync Modal</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="../assets/css/fonts.css" />
+  <link rel="stylesheet" href="../assets/css/modal.css" />
+</head>
+<body>
+  <!-- Button Section -->
+<div id="buttonSection" class="d-flex mh-100" >
+  <button class="btn btn-primary m-2" data-bs-toggle="modal" data-bs-target="#logoutModal">Logout Modal</button>
+  <button class="btn btn-success m-2" data-bs-toggle="modal" data-bs-target="#loginModal">Login Modal</button>
+</div>
+
+<!-- Logout Modal -->
+<div class="modal fade" id="logoutModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content custom-container p-0 border-0">
+      <div class="close-button" data-bs-dismiss="modal" aria-label="Close">
+        <img src="../assets/images/close.svg" alt="Close" class="close-img" />
+      </div>
+      <div class="common-button custom-button">
+        <img src="../assets/images/logout.svg" alt="logout Icon" class="login-image" />
+      </div>
+      <div>
+        <h1>Çıkış Yapıldı</h1>
+        <p>Tekrar giriş yapabilirsiniz.</p>
+      </div>
+      <div class="d-flex justify-content-center">
+        <a href="../authpage/Login.html" class="login-btn">
+          Giriş Yap
+          <img src="../assets/images/Vector.svg" alt="arrow icon" />
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Login Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content custom-container p-0 border-0">
+      <div class="close-button" data-bs-dismiss="modal" aria-label="Close">
+        <img src="../assets/images/close.svg" alt="Close" class="close-img" />
+      </div>
+      <div class="common-button customlogin-button">
+        <img src="../assets/images/login.svg" alt="login Icon" class="login-image" />
+      </div>
+      <div>
+        <h1>Şifreniz Değiştirilmiştir.</h1>
+        <p>Yeni şifreniz ile giriş yapabilirsiniz.</p>
+      </div>
+      <div class="d-flex justify-content-center">
+        <a href="../authpage/Login.html" class="login-btn">
+          Giriş Yap
+          <img src="../assets/images/Vector.svg" alt="arrow icon" />
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script src="../assets/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Datasync Login</title>
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../assets/css/fonts.css" />
+    <link rel="stylesheet" href="../assets/css/login.css" />
+</head>
+
+<body>
+    <div class="container-fluid d-flex p-0">
+        <!-- Left Panel -->
+        <div class="left-panel">
+            <img src="../assets/images/logo.svg" alt="Datasync Logo" class="logo">
+            <img src="../assets/images/logincircle.svg" alt="Circle" class="img-fluid login-circle">
+        </div>
+
+        <!-- Right Panel -->
+        <div class="right-panel">
+            <form class="login-form mx-auto">
+                <h3>Login</h3>
+
+                <!-- Email Field -->
+                <div class="mb-4">
+                    <label>E-Mail :</label>
+                    <div class="input-wrapper">
+                        <div class="input-icon-wrapper">
+                            <img src="../assets/images/user.svg" alt="User Icon" />
+                        </div>
+                        <input type="email" class="form-control input-with-icon" required />
+                    </div>
+                </div>
+
+                <!-- Password Field -->
+                <div class="mb-4">
+                    <label>Password:</label>
+                    <div class="input-wrapper">
+                        <div class="input-icon-wrapper">
+                            <img src="../assets/images/lock.svg" alt="Lock Icon" />
+                        </div>
+                        <input type="password" class="form-control shadow-none input-with-icon "
+                            placeholder="*****************" required />
+                        <img src="../assets/images/eye.svg" class="toggle-icon" alt="Toggle Password" />
+                    </div>
+                </div>
+
+                <!-- Remember Me + Forgot Password -->
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <div class="form-check custom-check">
+                        <input class="form-check-input" type="checkbox" id="rememberMe">
+                        <label class="form-check-label" for="rememberMe">Remember Me</label>
+                    </div>
+                    <a href="#">Forgot Password</a>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="d-flex justify-content-center">
+                    <button type="submit" class="custom-button">Sync Now</button>
+                </div>
+            </form>
+
+            <!-- Footer -->
+            <div class="footer mt-4">Right Reserved © Datasync 2025</div>
+        </div>
+
+    </div>
+</body>
+
+</html>
