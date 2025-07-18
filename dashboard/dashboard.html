@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Datasync</title>
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../assets/css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="../assets/css/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="../assets/css/chartStyle.css" />
+    <link rel="stylesheet" href="../assets/css/fonts.css" />
+    <link rel="stylesheet" href="../assets/css/layout.css" />
+    <link rel="stylesheet" href="../assets/css/cards.css" />
+    <link rel="stylesheet" href="../assets/css/trendSlider.css" />
+    <link rel="stylesheet" href="../assets/css/slider.css" />
+    <link rel="stylesheet" href="../assets/css/filter.css" />
+</head>
+
+<body>
+    <header class="header-section">
+        <div class="content">
+            <div class="left-content">
+                <h6>Sayfalar / Performans / Genel Performans</h6>
+                <h4 class="left-title">Genel Performans</h4>
+            </div>
+            <div class="right-content">
+                <div class="profit-btn">
+                    <div class="money-icon">
+                        <img src="../assets/images/dollar.svg" alt="" width="17" height="17">
+                    </div>
+                    <div class="profit-text">39,17</div>
+                    <div class="arrow-icon">
+                        <img src="../assets/images/up-arrow.svg" alt="" width="13" height="15">
+                    </div>
+                </div>
+                <div class="loss-btn">
+                    <div class="money-icon">
+                        <img src="../assets/images/money.svg" alt="" width="12" height="14">
+                    </div>
+                    <div class="profit-text red">43,52</div>
+                    <div class="arrow-icon">
+                        <img src="../assets/images/down-arrow.svg" alt="" width="13" height="15">
+                    </div>
+                </div>
+                <div class="notification" id="notificationToggle">
+                    <div class="notification-icon-wrapper">
+                        <img class="notification-icon" src="../assets/images/notification.svg" alt="" width="20"
+                            height="24">
+                    </div>
+                    <div class="notification-dropdown notification-box" id="notificationBox">
+                        <h6 class="dropdown-title">Bildirimler</h6>
+                        <div class="notification-list">
+                            <div class="d-flex gap-2 align-items-start mb-3">
+                                <img class="bell-icon" src="../assets/images/bell.svg" alt="" height="20" width="17">
+                                <div class="dropdown-text">Lorem ipsum dolor sit amet consectetur.</div>
+                            </div>
+                            <div class="d-flex gap-2 align-items-start  mb-3">
+                                <img class="bell-icon" src="../assets/images/bell.svg" alt="" height="20" width="17">
+                                <div class="dropdown-text">Lorem ipsum dolor sit amet consectetur.</div>
+                            </div>
+                            <div class="d-flex gap-2 align-items-start mb-3">
+                                <img class="bell-icon" src="../assets/images/bell.svg" alt="" height="20" width="17">
+                                <div class="dropdown-text">Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor
+                                    sit
+                                    amet consectetur.</div>
+                            </div>
+                            <div class="d-flex gap-2 align-items-start mb-3">
+                                <img class="bell-icon" src="../assets/images/bell.svg" alt="" height="20" width="17">
+                                <div class="dropdown-text">Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor
+                                    sit
+                                    amet consectetur.</div>
+                            </div>
+                            <div class="d-flex gap-2 align-items-start mb-3">
+                                <img class="bell-icon" src="../assets/images/bell.svg" alt="" height="20" width="17">
+                                <div class="dropdown-text">Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor
+                                    sit
+                                    amet consectetur.</div>
+                            </div>
+
+                        </div>
+                        <hr class="notification-divider" />
+                    </div>
+                </div>
+                <div class="message" id="messageToggle">
+                    <div class="message-icon-wrapper">
+                        <img src="../assets/images/message.svg" alt="" width="20" height="18">
+                    </div>
+                    <div class="message-dropdown" id="messageBox">
+                        <h6 class="dropdown-title2">Mesajlar</h6>
+                        <div class="hover-effect">
+                            <div class="message-list">
+                                <div class="d-flex gap-2 align-items-start mb-3">
+                                    <img src="../assets/images/slider1.svg" alt="" height="45" width="45">
+                                    <div>
+                                        <div class="dropdown-text">Merhabalar ürünümde birinin rengi yanlış gönderilmiş
+                                            değişim talep ettim ancak iki ürünüde göndermem gerekir mi?</div>
+                                        <div class="dropdown-time">23/05/2025 &nbsp; 10:00:59</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="message-list">
+                                <div class="d-flex gap-2 align-items-start mb-3">
+                                    <img src="../assets/images/slider2.svg" alt="" height="45" width="45">
+                                    <div>
+                                        <div class="dropdown-text">Merhaba, mor olanı ne zaman gelecek?</div>
+                                        <div class="dropdown-time">23/05/2025 &nbsp; 10:00:59</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="message-list">
+                                <div class="d-flex gap-2 align-items-start mb-3">
+                                    <img src="../assets/images/slider1.svg" alt="" height="45" width="45">
+                                    <div>
+                                        <div class="dropdown-text">Merhabalar ürünümde birinin rengi yanlış gönderilmiş
+                                            değişim talep ettim ancak iki ürünüde göndermem gerekir mi?</div>
+                                        <div class="dropdown-time">23/05/2025 &nbsp; 10:00:59</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="message-list">
+                                <div class="d-flex gap-2 align-items-start mb-3">
+                                    <img src="../assets/images/slider2.svg" alt="" height="45" width="45">
+                                    <div>
+                                        <div class="dropdown-text">Merhaba, mor olanı ne zaman gelecek?</div>
+                                        <div class="dropdown-time">23/05/2025 &nbsp; 10:00:59</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="notification-divider" />
+                        <button class="view-all-btn">Tüm Mesajlar</button>
+                    </div>
+                </div>
+                <div class="profile-wrapper">
+                    <div class="profile-toggle" id="dropdownToggle" onclick="toggleDropdown()">
+                        <div class="profile-content">
+                            <div class="profile-img">
+                                <img src="../assets/images/profile.svg" alt="" width="41" height="41">
+                            </div>
+                            <div class="profile-text">Berk Uzgören</div>
+                            <div class="dropdown-arrow">
+                                <img src="../assets/images/open-arrow.svg" class="arrow-down" height="7" width="12">
+                                <img src="../assets/images/close-arrow.svg" class="arrow-up" height="7" width="12">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Dropdown menu -->
+                    <div class="dropdown-menu" id="dropdownMenu">
+                        <div class="dropdown-item active">
+                            <div class="item-left">
+                                <img src="../assets/images/user.svg" width="23" height="22" alt="Profile">
+                                <span>Profilimi Düzenle</span>
+                                <img src="../assets/images/right-arrow.svg" class="arrow-icon" width="8" height="12"
+                                    alt="arrow">
+                            </div>
+                        </div>
+
+                        <div class="dropdown-item">
+                            <div class="item-left">
+                                <img src="../assets/images/lock.svg" width="24" height="24" alt="Şifre">
+                                <span class="span-item">Şifre Değiştir</span>
+                                <img src="../assets/images/right-arrow.svg" class="arrow-icon" width="8" height="12"
+                                    alt="arrow">
+                            </div>
+                        </div>
+
+                        <hr />
+
+                        <div class="dropdown-item logout">
+                            <a href="../authpage/login.html">
+                                <img src="../assets/images/logout.svg" width="20" height="20" alt="Logout">
+                                <span>Çıkış Yap</span>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="sidebar-section" id="sidebar">
+        <div class="sidebar-header">
+            <div class="sidebar-toggle" onclick="toggleSidebar()">
+                <img src="../assets/images/sidebar/line.svg" alt="icon" />
+                <img src="../assets/images/sidebar/arrow.svg" class="sidebartoggleArrow" alt="icon" />
+            </div>
+            <a href="../index.html" class="sidebar-logo">
+                <img src="../assets/images/sidebar/DatasyncLogo.svg" alt="logo" />
+                <img src="../assets/images/sidebar/DatasyncName.svg" alt="logo" />
+            </a>
+        </div>
+        <div class="sidebar-content">
+            <h3>
+                <img src="../assets/images/sidebar/TicketStar.svg" alt="logo" />
+                <span class="hidecontent">Favoriler</span>
+            </h3>
+            <div class="sidebar-nav hidecontent">
+                <a href="/"><span>Sepet Analizi</span><img src="../assets/images/sidebar/dropdownarrow.svg"
+                        alt="logo" /></a>
+                <a href="/"><span>İptal & İade</span><img src="../assets/images/sidebar/dropdownarrow.svg"
+                        alt="logo" /></a>
+                <a href="/"><span>Ürün Listesi</span><img src="../assets/images/sidebar/dropdownarrow.svg"
+                        alt="logo" /></a>
+            </div>
+            <hr />
+            <div class="accordion sidebar-accordion" id="sidebarAccordion">
+
+                <!-- Performans -->
+                <div class="accordion-item bg-transparent border-0">
+                    <h2 class="accordion-header" id="headingPerformance">
+                        <button class="accordion-button collapsed bg-transparent text-white shadow-none" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#collapsePerformance" aria-expanded="false"
+                            aria-controls="collapsePerformance">
+                            <span><img src="../assets/images/sidebar/dropdownIcon1.svg" alt="icon" />
+                                <span class="hidecontent">Performans</span></span>
+                        </button>
+                    </h2>
+                    <div id="collapsePerformance" class="accordion-collapse collapse"
+                        aria-labelledby="headingPerformance" data-bs-parent="#sidebarAccordion">
+                        <div class="submenu">
+                            <a href="#"><span>Genel Performans</span> <img
+                                    src="../assets/images/sidebar/dropdownarrow.svg" alt="arrow" /></a>
+                            <a href="#"><span>Ürün Performansı</span> <img
+                                    src="../assets/images/sidebar/dropdownarrow.svg" alt="arrow" /></a>
+                            <a href="#"><span>Trendler</span> <img src="../assets/images/sidebar/dropdownarrow.svg"
+                                    alt="arrow" /></a>
+                            <a href="#"><span>Sepet Analizi</span> <img src="../assets/images/sidebar/dropdownarrow.svg"
+                                    alt="arrow" /></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Operasyon -->
+                <div class="accordion-item bg-transparent border-0">
+                    <h2 class="accordion-header" id="headingOperasyon">
+                        <button class="accordion-button collapsed bg-transparent text-white shadow-none" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#collapseOperasyon" aria-expanded="false"
+                            aria-controls="collapseOperasyon">
+                            <span><img src="../assets/images/sidebar/dropdownIcon2.svg" alt="icon" />
+                                <span class="hidecontent">Operasyon</span></span>
+                        </button>
+                    </h2>
+                    <div id="collapseOperasyon" class="accordion-collapse collapse" aria-labelledby="headingOperasyon"
+                        data-bs-parent="#sidebarAccordion">
+                        <div class="submenu">
+                            <a href="#"><span>Genel Bakış</span> <img src="../assets/images/sidebar/dropdownarrow.svg"
+                                    alt="arrow" /></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sipariş Yönetim -->
+                <div class="accordion-item bg-transparent border-0">
+                    <h2 class="accordion-header" id="headingSiparis">
+                        <button class="accordion-button collapsed bg-transparent text-white shadow-none" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#collapseSiparis" aria-expanded="false"
+                            aria-controls="collapseSiparis">
+                            <span><img src="../assets/images/sidebar/dropdownIcon3.svg" alt="icon" />
+                                <span class="hidecontent">Sipariş Yönetim</span></span>
+                        </button>
+                    </h2>
+                    <div id="collapseSiparis" class="accordion-collapse collapse" aria-labelledby="headingSiparis"
+                        data-bs-parent="#sidebarAccordion">
+                        <div class="submenu">
+                            <a href="#"><span>Siparişler</span> <img src="../assets/images/sidebar/dropdownarrow.svg"
+                                    alt="arrow" /></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ürünler -->
+                <div class="accordion-item bg-transparent border-0">
+                    <h2 class="accordion-header" id="headingUrunler">
+                        <button class="accordion-button collapsed bg-transparent text-white shadow-none" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#collapseUrunler" aria-expanded="false"
+                            aria-controls="collapseUrunler">
+                            <span><img src="../assets/images/sidebar/dropdownIcon4.svg" alt="icon" /> <span
+                                    class="hidecontent">Ürünler</span></span>
+                        </button>
+                    </h2>
+                    <div id="collapseUrunler" class="accordion-collapse collapse" aria-labelledby="headingUrunler"
+                        data-bs-parent="#sidebarAccordion">
+                        <div class="submenu">
+                            <a href="#"><span>Ürün Listesi</span> <img src="../assets/images/sidebar/dropdownarrow.svg"
+                                    alt="arrow" /></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pazarlama -->
+                <div class="accordion-item bg-transparent border-0">
+                    <h2 class="accordion-header" id="headingPazarlama">
+                        <button class="accordion-button collapsed bg-transparent text-white shadow-none" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#collapsePazarlama" aria-expanded="false"
+                            aria-controls="collapsePazarlama">
+                            <span><img src="../assets/images/sidebar/dropdownIcon5.svg" alt="icon" />
+                                <span class="hidecontent">Pazarlama</span></span>
+                        </button>
+                    </h2>
+                    <div id="collapsePazarlama" class="accordion-collapse collapse" aria-labelledby="headingPazarlama"
+                        data-bs-parent="#sidebarAccordion">
+                        <div class="submenu">
+                            <a href="#"><span>Kampanyalar</span> <img src="../assets/images/sidebar/dropdownarrow.svg"
+                                    alt="arrow" /></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Raporlar -->
+                <div class="accordion-item bg-transparent border-0">
+                    <h2 class="accordion-header" id="headingRaporlar">
+                        <button class="accordion-button collapsed bg-transparent text-white shadow-none" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#collapseRaporlar" aria-expanded="false"
+                            aria-controls="collapseRaporlar">
+                            <span><img src="../assets/images/sidebar/dropdownIcon6.svg" alt="icon" />
+                                <span class="hidecontent">Raporlar</span></span>
+                        </button>
+                    </h2>
+                    <div id="collapseRaporlar" class="accordion-collapse collapse" aria-labelledby="headingRaporlar"
+                        data-bs-parent="#sidebarAccordion">
+                        <div class="submenu">
+                            <a href="#"><span>Genel Rapor</span><img src="../assets/images/sidebar/dropdownarrow.svg"
+                                    alt="arrow" /></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ayarlar -->
+                <div class="accordion-item bg-transparent border-0">
+                    <h2 class="accordion-header" id="headingAyarlar">
+                        <button class="accordion-button collapsed bg-transparent text-white shadow-none" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#collapseAyarlar" aria-expanded="false"
+                            aria-controls="collapseAyarlar">
+                            <span><img src="../assets/images/sidebar/dropdownIcon7.svg" alt="icon" /> <span
+                                    class="hidecontent">Ayarlar</span></span>
+                        </button>
+                    </h2>
+                    <div id="collapseAyarlar" class="accordion-collapse collapse" aria-labelledby="headingAyarlar"
+                        data-bs-parent="#sidebarAccordion">
+                        <div class="submenu">
+                            <a href="#"><span>Hesap</span> <img src="../assets/images/sidebar/dropdownarrow.svg"
+                                    alt="arrow" /></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="sidebar-footer">
+                <a href="../index.html" class="sidebar-btn">
+                    <img src="../assets/images/sidebar/button-logo.svg" alt="logo" />
+                    <span class="hidecontent">SINK ile konuş</span>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="main-content">
+        <!-- filter part -->
+        <div class="filter-section">
+            <div class="filter-content">
+
+                <!-- Calendar Icon -->
+                <button class="icon-btn">
+                    <img src="../assets/images/calender.svg" alt="Calendar" width="28" height="30" />
+                </button>
+
+                <!-- Filter Buttons -->
+                <button class="filter-btn">Günlük</button>
+                <button class="filter-btn">Haftalık</button>
+                <button class="filter-btn active">Aylık</button>
+                <button class="filter-btn">Yıllık</button>
+                <button class="filter-btn">Son 30 Gün</button>
+
+                <!-- Divider -->
+                <div class="divider"></div>
+
+                <!-- Custom Filter -->
+                <div class="custom-dropdown-wrapper">
+                    <div class="custom-dropdown">
+                        <div class="left">
+                            <img src="../assets/images/filter.svg" alt="Filter" width="17" height="16" />
+                            <span class="filter-title">Özel Filtreleme</span>
+                        </div>
+                        <div class="arrow-box">
+                            <img class="dropdown-arrow" src="../assets/images/bluedown-arrow.svg" alt="Dropdown"
+                                width="11" height="6" />
+                        </div>
+                    </div>
+
+                    <div class="dropdown-panel">
+                        <div class="dropdown-flex">
+                            <div class="calendar-area d-flex gap-4 p-2 ">
+                                <div id="calendar-container" class="calendar-left "></div>
+
+                                <div class="calendar-controls">
+                                    <div class="d-flex gap-2 mb-5">
+                                        <select id="monthSelect" class="form-select shadow-none "
+                                            style="font-size: 20px; font-weight: 700; color: #023E7D;"></select>
+                                        <select id="yearSelect" class="form-select shadow-none"
+                                            style="font-size: 20px; font-weight: 500; color: #023E7D;"></select>
+                                    </div>
+                                    <div class="d-flex gap-2 align-items-center ">
+                                        <select id="startHour" class="form-select time-select"></select> :
+                                        <select id="startMinute" class="form-select time-select"></select>
+                                        <span class="mx-1">-</span>
+                                        <select id="endHour" class="form-select time-select"></select> :
+                                        <select id="endMinute" class="form-select time-select"></select>
+                                    </div>
+                                    <div class="selected-range-box">
+                                        27/04/25 18:25 - 30/04/25 19:30
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="main-right">
+                                <div class="button-area">
+                                    <div class="all-btn">Pazaryeri</div>
+                                    <div class="all-btn">Marka</div>
+                                    <div class="all-btn">Kategori</div>
+                                    <div class="all-btn">Cari</div>
+                                    <div class="all-btn">Ürün Kodu</div>
+                                    <div class="all-btn">ML</div>
+                                    <div class="all-btn">Aroma</div>
+                                    <div class="all-btn">Ürün Grubu</div>
+                                    <div class="all-btn">Renk</div>
+                                    <div class="all-btn">Özellik</div>
+                                    <div class="all-btn">Yaş</div>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-center gap-2 custom-blue">
+                                    <img src="../assets/images/whitefilter.svg" alt="">
+                                    <div>Filtrele</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- DROPDOWN PANEL END -->
+                </div>
+            </div>
+        </div>
+        <!-- details card -->
+        <div class="details-card common-spacing">
+            <div class="custom-container">
+                <div class="details-card-content">
+                    <!-- Card 1 -->
+                    <div class="stat-card">
+                        <div class="stat-title">
+                            <div class="stat-img"><img src="../assets/images/trolly.svg" alt="Cart" width="16" />
+                            </div>
+                            Toplam Sipariş
+                        </div>
+                        <div class="stat-flex">
+                            <div class="stat-value">2.648</div>
+                            <div class="stat-change">
+                                <div class="uparrow"><img src="../assets/images/uparrow.svg" alt="Up" width="14" />
+                                </div>
+                                <span class="text-green">26.84%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="stat-card">
+                        <div class="stat-title">
+                            <div class="stat-img"><img src="../assets/images/download.svg" alt="Download" width="16" />
+                            </div>
+                            Gelir
+                        </div>
+                        <div class="stat-flex">
+                            <div class="stat-value">₺ 2.6K</div>
+                            <div class="stat-change">
+                                <div class="uparrow"><img src="../assets/images/uparrow.svg" alt="Up" width="14" />
+                                </div>
+                                <span class="text-green">26.84%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="stat-card">
+                        <div class="stat-title">
+                            <div class="stat-img"><img src="../assets/images/profit.svg" alt="Profit" width="16" />
+                            </div>
+                            Kar
+                        </div>
+                        <div class="stat-flex">
+                            <div class="stat-value">₺ 2.6K</div>
+                            <div class="stat-change">
+                                <div class="downarrow"><img src="../assets/images/downarrow.svg" alt="Down"
+                                        width="14" /></div>
+                                <span class="text-red">26.84%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 4 -->
+                    <div class="stat-card">
+                        <div class="stat-title">
+                            <div class="stat-img"><img src="../assets/images/Union.svg" alt="Return" width="16" />
+                            </div>
+                            İade
+                        </div>
+                        <div class="stat-flex">
+                            <div class="stat-value">258 Adet</div>
+                            <div class="stat-change">
+                                <img src="../assets/images/danger.svg" alt="Warning" width="20" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Order Status -->
+        <div class="order-status common-spacing chart-box custom-container">
+            <div class="custom-container">
+                <div class="header">
+                    <div class="title">Sipariş Durumu <strong>(Satış)</strong></div>
+                    <div class="order-tabs-container">
+                        <div class="tabs">
+                            <button class="tab active" data-type="sales">Satış</button>
+                            <button class="tab" data-type="count">Adet</button>
+                            <button class="tab" data-type="profit">Net Kar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="underline_div"></div>
+                <div class="chart-area">
+                    <div class="d-flex align-items-center justify-content-end w-100">
+                        <button class="refresh-btn" onclick="location.reload()">
+                            <img src="../assets/images/refresh.svg" alt="icon" />
+                        </button>
+                    </div>
+                    <canvas id="salesChart"></canvas>
+                </div>
+            </div>
+        </div>
+        <!-- horizontal types -->
+        <div class="horizontal-types common-spacing">
+            <div class="card-container custom-container">
+
+                <!-- trend card -->
+                <div class="trend-card">
+                    <div class="ai-icon"><img src="../assets/images/AI.svg" alt=""></div>
+                    <h1>Genel Trendler</h1>
+
+                    <div class="owl-carousel trend-carousel">
+                        <div class="item">
+                            <div class="trend-box">
+                                <h3>Marka Performans Hakkında Trendler</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, suscipit! Quam
+                                    facere
+                                    inventore temporibus, enim itaque velit quidem facilis sed.</p>
+
+                            </div>
+                            <div class="trend-box">
+                                <h3>Kategori Performans Hakkında Trendler</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, suscipit! Quam
+                                    facere
+                                    inventore temporibus, enim itaque velit quidem facilis sed.</p>
+
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="trend-box">
+                                <h3>Marka Performans Hakkında Trendler</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, suscipit! Quam
+                                    facere
+                                    inventore temporibus, enim itaque velit quidem facilis sed.</p>
+
+                            </div>
+                            <div class="trend-box">
+                                <h3>Marka Performans Hakkında Trendler</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, suscipit! Quam
+                                    facere
+                                    inventore temporibus, enim itaque velit quidem facilis sed.</p>
+
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="trend-box">
+                                <h3>Marka Performans Hakkında Trendler</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, suscipit! Quam
+                                    facere
+                                    inventore temporibus, enim itaque velit quidem facilis sed.</p>
+
+                            </div>
+                            <div class="trend-box">
+                                <h3>Kategori Performans Hakkında Trendler</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, suscipit! Quam
+                                    facere
+                                    inventore temporibus, enim itaque velit quidem facilis sed.</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <button class="speak-button">SINK ile konuş</button>
+
+                    <div class="dots trend-dots">
+                    </div>
+                </div>
+
+                <!-- support-card -->
+                <div class="support-card">
+                    <div class="ai-icon"><img src="../assets/images/AI.svg" alt=""></div>
+                    <h1>Önerilen Aksiyonlar</h1>
+
+                    <div class="owl-carousel trend-carousel">
+                        <div class="item">
+                            <div class="support-box">
+                                <h3>Marka Performans Hakkında Trendler</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, suscipit! Quam
+                                    facere
+                                    inventore temporibus, enim itaque velit quidem facilis sed.</p>
+
+                            </div>
+                            <div class="support-box">
+                                <h3>Kategori Performans Hakkında Trendler</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, suscipit! Quam
+                                    facere
+                                    inventore temporibus, enim itaque velit quidem facilis sed.</p>
+
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="support-box">
+                                <h3>Marka Performans Hakkında Trendler</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, suscipit! Quam
+                                    facere
+                                    inventore temporibus, enim itaque velit quidem facilis sed.</p>
+
+                            </div>
+                            <div class="support-box">
+                                <h3>Marka Performans Hakkında Trendler</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, suscipit! Quam
+                                    facere
+                                    inventore temporibus, enim itaque velit quidem facilis sed.</p>
+
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="support-box">
+                                <h3>Marka Performans Hakkında Trendler</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, suscipit! Quam
+                                    facere
+                                    inventore temporibus, enim itaque velit quidem facilis sed.</p>
+
+                            </div>
+                            <div class="support-box">
+                                <h3>Kategori Performans Hakkında Trendler</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, suscipit! Quam
+                                    facere
+                                    inventore temporibus, enim itaque velit quidem facilis sed.</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <button class="support-button">SINK ile konuş</button>
+                    <div class="dots support-dots">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--  cards slider -->
+        <div class="cards-slider common-spacing">
+            <div class="custom-container market-carousel-wrapper">
+                <h4 class="header-content">Pazaryerleri Özet</h4>
+                <div class="owl-carousel owl-theme market-carousel">
+
+                    <!-- Card 1 -->
+                    <div class="market-card">
+                        <div class="d-flex justify-content-center align-items-center gap-4">
+                            <img src="../assets/images/slider1.svg" alt="Hepsiburada" class="market-icon" />
+                            <h6>Hepsiburada</h6>
+                        </div>
+                        <p class="top-content">Toplam Sipariş Tutarı</p>
+                        <p class="value">₺ 550.7K</p>
+                        <p class="top-content">Toplam Adet</p>
+                        <p class="value">3000</p>
+                        <div class="summary-row">
+                            <div class="summary-block">
+                                <div class="summary-header">Adet</div>
+                                <div class="slider-arrow down-arrow">
+                                    <img src="../assets/images/downarrow.svg" />
+                                </div>
+                                <div class="percentage down">26.84%</div>
+                            </div>
+                            <div class="summary-block">
+                                <div class="summary-header">Satış</div>
+                                <div class="slider-arrow down-arrow">
+                                    <img src="../assets/images/downarrow.svg" />
+                                </div>
+                                <div class="percentage down">26.84%</div>
+                            </div>
+                            <div class="summary-block">
+                                <div class="summary-header">Kar</div>
+                                <div class="slider-arrow down-arrow">
+                                    <img src="../assets/images/downarrow.svg" />
+                                </div>
+                                <div class="percentage down">26.84%</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="market-card">
+                        <div class="d-flex justify-content-center align-items-center gap-4">
+                            <img src="../assets/images/slider2.svg" alt="Trendyol" class="market-icon" />
+                            <h6>Trendyol</h6>
+                        </div>
+                        <p class="top-content">Toplam Sipariş Tutarı</p>
+                        <p class="value">₺ 3.6M</p>
+                        <p class="top-content">Toplam Adet</p>
+                        <p class="value">3000</p>
+                        <div class="summary-row">
+                            <div class="summary-block">
+                                <div class="summary-header">Adet</div>
+                                <div class="slider-arrow up-arrow">
+                                    <img src="../assets/images/uparrow.svg" />
+                                </div>
+                                <div class="percentage">26.84%</div>
+                            </div>
+                            <div class="summary-block">
+                                <div class="summary-header">Satış</div>
+                                <div class="slider-arrow up-arrow">
+                                    <img src="../assets/images/uparrow.svg" />
+                                </div>
+                                <div class="percentage">26.84%</div>
+                            </div>
+                            <div class="summary-block">
+                                <div class="summary-header">Kar</div>
+                                <div class="slider-arrow up-arrow">
+                                    <img src="../assets/images/uparrow.svg" />
+                                </div>
+                                <div class="percentage">26.84%</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="market-card">
+                        <div class="d-flex justify-content-center align-items-center gap-4">
+                            <img src="../assets/images/slider3.svg" alt="B2B" class="market-icon" />
+                            <h6>B2B</h6>
+                        </div>
+                        <p class="top-content">Toplam Sipariş Tutarı</p>
+                        <p class="value">₺ 3.6M</p>
+                        <p class="top-content">Toplam Adet</p>
+                        <p class="value">3000</p>
+                        <div class="summary-row">
+                            <div class="summary-block">
+                                <div class="summary-header">Adet</div>
+                                <div class="slider-arrow up-arrow">
+                                    <img src="../assets/images/uparrow.svg" />
+                                </div>
+                                <div class="percentage">26.84%</div>
+                            </div>
+                            <div class="summary-block">
+                                <div class="summary-header">Satış</div>
+                                <div class="slider-arrow up-arrow">
+                                    <img src="../assets/images/uparrow.svg" />
+                                </div>
+                                <div class="percentage">26.84%</div>
+                            </div>
+                            <div class="summary-block">
+                                <div class="summary-header">Kar</div>
+                                <div class="slider-arrow up-arrow">
+                                    <img src="../assets/images/uparrow.svg" />
+                                </div>
+                                <div class="percentage">26.84%</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="market-card">
+                        <div class="d-flex justify-content-center align-items-center gap-4">
+                            <img src="../assets/images/slider4.svg" alt="Pazarama" class="market-icon" />
+                            <h6>Pazarama</h6>
+                        </div>
+                        <p class="top-content">Toplam Sipariş Tutarı</p>
+                        <p class="value">₺ 3.6M</p>
+                        <p class="top-content">Toplam Adet</p>
+                        <p class="value">3000</p>
+                        <div class="summary-row">
+                            <div class="summary-block">
+                                <div class="summary-header">Adet</div>
+                                <div class="slider-arrow up-arrow">
+                                    <img src="../assets/images/uparrow.svg" />
+                                </div>
+                                <div class="percentage">26.84%</div>
+                            </div>
+                            <div class="summary-block">
+                                <div class="summary-header">Satış</div>
+                                <div class="slider-arrow up-arrow">
+                                    <img src="../assets/images/uparrow.svg" />
+                                </div>
+                                <div class="percentage">26.84%</div>
+                            </div>
+                            <div class="summary-block">
+                                <div class="summary-header">Kar</div>
+                                <div class="slider-arrow up-arrow">
+                                    <img src="../assets/images/uparrow.svg" />
+                                </div>
+                                <div class="percentage">26.84%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="market-controls"></div>
+            </div>
+        </div>
+        <!-- general health stock -->
+        <div class="general-health-stock common-spacing">
+            <div class="left-part w-100 chart-box ">
+                <div class="header">
+                    <div class="title">Genel Stok Sağlık</div>
+                    <button class="refresh-btn" onclick="location.reload()">
+                        <img src="../assets/images/refresh.svg" alt="icon" />
+                    </button>
+                </div>
+                <div class="underline_div"></div>
+                <div class="stock-tabs-container">
+                    <div class="tabs">
+                        <button class="tab" data-type="table">Tablo</button>
+                        <button class="tab active" data-type="graph">Grafik</button>
+                    </div>
+                </div>
+                <div class="underline_div"></div>
+                <div class="chart-wrapper">
+                    <div id="graphView" class="graphView">
+                        <canvas id="stockHealthChart"></canvas>
+                    </div>
+                    <div id="tableView" class="tableView">
+                        Table
+                    </div>
+                </div>
+            </div>
+            <!-- right part -->
+            <div class="w-100 right-part chart-box ">
+                <div class="title" style="text-align: center;">Stok Durum Puanı (%)</div>
+                <div class="underline_div"></div>
+                <div class="chart-area" style="height: 300px;">
+                    <canvas id="stockScoreChart"></canvas>
+                </div>
+
+                <div class="donut-legend">
+                    <div class="box"><span class="dot blue-dark"></span> Kritik Envanter</div>
+                    <div class="box"><span class="dot orange"></span> Normal Envanter</div>
+                    <div class="box"><span class="dot blue-light"></span> Stokta Yok</div>
+                    <div class="box"><span class="dot gray"></span> Fazla Stokta</div>
+                </div>
+            </div>
+        </div>
+        <!-- time frame -->
+        <div class="time-frame common-spacing">
+            <div class="custom-container chart-box">
+                <div class="header">
+                    <div class="title">Zaman Dilimi</div>
+                    <button class="refresh-btn" onclick="location.reload()">
+                        <img src="../assets/images/refresh.svg" alt="icon" />
+                    </button>
+                </div>
+                <div class="underline_div"></div>
+                <div class="chart-area" style="height: 350px;">
+                    <canvas id="timeSeriesChart"></canvas>
+                </div>
+            </div>
+
+            <div class="right-part">
+                <div class="d-flex flex-column align-items-center justify-content-between h-100 gap-3">
+                    <!-- Card 1 -->
+                    <div class="ds-card-container">
+                        <div class="ds-card">
+                            <div class="d-flex align-items-center mb-2">
+                                <div class="ds-icon me-2">
+                                    <img src="../assets/images/view.svg" alt="View" width="15" height="11" />
+                                </div>
+                                <div class="ds-title">Toplam Görüntülenme</div>
+                            </div>
+                            <div class="ds-info-row">
+                                <div class="ds-value">2.648</div>
+                                <div class="ds-change">
+                                    <div class="ds-arrow-box">
+                                        <img src="../assets/images/uparrow.svg" class="ds-arrow-img" alt="Up" />
+                                    </div>
+                                    <span class="ds-text-green">26.84%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="ds-card-container">
+                        <div class="ds-card">
+                            <div class="d-flex align-items-center mb-2">
+                                <div class="ds-icon me-2">
+                                    <img src="../assets/images/cart.svg" alt="Cart" width="18" height="13" />
+                                </div>
+                                <div class="ds-title">Toplam Sepete Ekleme</div>
+                            </div>
+                            <div class="ds-info-row">
+                                <div class="ds-value">2.648</div>
+                                <div class="ds-change">
+                                    <div class="ds-arrow-box">
+                                        <img src="../assets/images/uparrow.svg" class="ds-arrow-img" alt="Up" />
+                                    </div>
+                                    <span class="ds-text-green">26.84%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="ds-card-container">
+                        <div class="ds-card">
+                            <div class="d-flex align-items-center mb-2">
+                                <div class="ds-icon me-2">
+                                    <img src="../assets/images/rate.svg" alt="Conversion" width="15" height="11" />
+                                </div>
+                                <div class="ds-title">Dönüşüm Oranı</div>
+                            </div>
+                            <div class="ds-rate-row">
+                                <div class="ds-value">% 10618</div>
+                                <div class="ds-change">
+                                    <div class="ds-arrow-box">
+                                        <img src="../assets/images/uparrow.svg" class="ds-arrow-img" alt="Up" />
+                                    </div>
+                                    <span class="ds-text-green">26.84%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <button id="scrollToTopBtn" title="Go to top">
+        <img src="../assets/images/blueuparrow.svg" alt="Scroll to Top" width="22" height="12">
+    </button>
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/charts-js-net/chart.js"></script>
+    <script src="../assets/js/charts-js-net/chartjs-plugin-datalabels.js"></script>
+    <script src="../assets/js/charts-js-net/chartjs-plugin-datalabels@2.2.0.js"></script>
+    <script src="../assets/js/jquery-3.6.0.min.js"></script>
+    <script src="../assets/js/owl.carousel.min.js"></script>
+    <script src="../assets/js/dropdown/dropdown.js"></script>
+    <script src="../assets/js/layout/sidebar.js"></script>
+    <script src="../assets/js/slider/slider.js"></script>
+    <script src="../assets/js/filter/filter.js"></script>
+
+    <!-- charts -->
+    <script src="../assets/js/charts/stock-health.js"></script>
+    <script src="../assets/js/charts/sales-order.js"></script>
+    <script src="../assets/js/charts/stock-score.js"></script>
+    <script src="../assets/js/charts/time-series.js"></script>
+    <script src="../assets/js/charts/customer-chart.js"></script>
+    <script src="../assets/js/charts/weekly-sales-chart.js"></script>
+</body>
+
+</html>

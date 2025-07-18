@@ -1,8 +1,5 @@
-body {
-  background: #f7f9fc;
-  margin: 0;
-  padding: 2rem;
-}
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
 
 .container {
   background: #fff;
@@ -15,7 +12,7 @@ body {
 
 .underline_div {
   width: 100%;
-  height: 2px;
+  height: 1px;
   background-color: #CCD8E5;
   margin: 30px 0;
   padding: 0;
@@ -30,16 +27,21 @@ body {
 
 .title {
   font-size: 24px;
-  font-weight: 600;
+  font-weight: 700;
   color: #A3AED0;
+}
+
+.order-tabs-container {
+  display: flex;
+  justify-content: end;
 }
 
 .tabs {
   display: inline-flex;
   background-color: #F4F7FE;
-  padding: 4px;
+  padding: 5px 4px;
   border-radius: 10px;
-  width: 100%;
+  width: fit-content;
   justify-content: space-between;
 }
 
@@ -48,18 +50,51 @@ body {
   border: none;
   background-color: transparent;
   color: #023E7D;
-  font-weight: 600;
-  padding: 8px 24px;
-  border-radius: 10px;
-  font-family: 'Gilroy', sans-serif;
-  font-size: 14px;
+  font-weight: 700;
+  padding: 7px 34px;
+  border-radius: 8px;
+  font-family: 'Gilroy';
+  font-size: 20px;
   cursor: pointer;
+  white-space: nowrap;
 }
 
 .tabs .tab.active {
   background-color: #023E7D;
   color: white;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.08);
+}
+
+.price-quantity-tabs .price-quantity-tab.active {
+  background-color: #F5F8FF;
+  color: #023E7D;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.08);
+}
+
+.price-quantity-tabs {
+  display: inline-flex;
+  background-color: #fff;
+  padding: 9px;
+  width: 100%;
+  justify-content: space-between;
+  border-radius: 12px;
+  border-width: 1px;
+  gap: 16px;
+  border: 1px solid #E8EEFF;
+
+}
+
+.price-quantity-tabs .price-quantity-tab {
+  width: 100%;
+  border: 1px solid #E8EEFF;
+  background-color: #fff;
+  color: #023E7D;
+  font-weight: 600;
+  padding: 8px 24px;
+  border-radius: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  white-space: nowrap;
 }
 
 .chart-area {
@@ -121,12 +156,12 @@ canvas {
   position: relative;
 }
 
-#graphView {
+.graphView {
   height: 100%;
   display: block;
 }
 
-#tableView {
+.tableView {
   display: none;
   height: 100%;
   font-size: 18px;
@@ -135,16 +170,16 @@ canvas {
 }
 
 .refresh-btn {
-  background-color: #f4f7fe;
+  background-color: #F5F8FF;
   border: none;
   border-radius: 12px;
-  width: 36px;
-  height: 36px;
+  width: 40px;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  border: 0.59px solid #E8EEFF;
   transition: background 0.2s ease;
 }
 
@@ -152,7 +187,734 @@ canvas {
   background-color: #e4ecf8;
 }
 
-.refresh-btn .material-icons {
-  font-size: 20px;
+.material-icons {
+  font-size: 25px;
   color: #023E7D;
+}
+
+.header-controls {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.month-select {
+  padding: 6px 12px;
+  border-radius: 10px;
+  border: 1px solid #d3dce6;
+  font-weight: 600;
+  color: #003b91;
+  background: #f4f7fe;
+}
+
+.right-side {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.date-filter {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+}
+
+.calendar-input {
+  border: 1px solid #ccc;
+  padding: 4px 6px;
+  border-radius: 6px;
+  font-size: 14px;
+  opacity: 0;
+  background-color: #fff;
+  z-index: 10;
+  width: 24px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+}
+
+.date-filter.open .calendar-input {
+  display: block;
+}
+
+.channel-tabs {
+  display: flex;
+  gap: 10px;
+  margin-left: 20px;
+  justify-content: space-between;
+}
+
+.channel-tabs .tab {
+  height: 40px;
+  width: 132px;
+  border-radius: 12px;
+  background-color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  border: 1px solid #E8EEFF;
+}
+
+.view-toggle-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.view-toggle {
+  border: 1px solid #E8EEFF;
+  border-radius: 12px;
+  background-color: #fff;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 48px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #F5F8FF;
+  border-radius: 8px;
+  border: 1px solid #E8EEFF
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+input:checked+.slider {
+  background-color: #FFC283;
+}
+
+input:checked+.slider:before {
+  transform: translateX(24px);
+}
+
+.view-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1B2559;
+}
+
+.filter-tab {
+  padding: 6px 12px;
+  margin-right: 6px;
+  border: none;
+  background-color: #FFFFFF;
+  color: #023E7D;
+  font-weight: 500;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 1px solid #E8EEFF;
+  transition: 0.2s ease;
+}
+
+.filter-tab.active {
+  background-color: #F5F8FF;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.week-filter-container {
+  border: 1px solid #E2E8F0;
+  border-radius: 16px;
+  padding: 16px 24px;
+  max-width: 100%;
+  text-align: center;
+  margin: 10px 20px;
+}
+
+.week-filter-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #94A3B8;
+  margin-bottom: 12px;
+}
+
+.week-chip-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.week-chip {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 0 0 1px #e2e8f0;
+  padding: 8px 12px;
+  position: relative;
+  font-family: 'Segoe UI', sans-serif;
+  color: #0F172A;
+  overflow: hidden;
+  width: fit-content;
+}
+
+.chip-strip {
+  width: 8px;
+  height: 100%;
+  background-color: var(--accent, #0A3D91);
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.chip-content {
+  display: flex;
+  align-items: center;
+  padding-left: 14px;
+  gap: 12px;
+}
+
+.chip-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+.chip-text strong {
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.chip-text span {
+  font-size: 12px;
+  color: #334155;
+  font-weight: 500;
+}
+
+.chip-divider {
+  width: 1px;
+  height: 24px;
+  background-color: #CBD5E1;
+}
+
+.monthly-details {
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  gap: 40px;
+}
+
+.monthly-details div {
+  display: flex;
+  flex-direction: column;
+}
+
+.month-label {
+  font-weight: 500;
+  font-size: 20px;
+  color: #747C98;
+}
+
+.month-value {
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 30px;
+}
+
+.total-sales {
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 30px;
+  color: #023E7D;
+}
+
+.chart-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.export-btn {
+  background-color: #f4f7fe;
+  border: none;
+  border-radius: 12px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: 0.59px solid #E8EEFF;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: background 0.2s ease;
+}
+
+.export-btn:hover {
+  background-color: #e4ecf8;
+}
+
+.custom-dropdown {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 160px;
+  height: 40px;
+  padding: 0 0 0 10px;
+  border: 0.6px solid #E8EEFF;
+  border-radius: 14px;
+  background-color: #fff;
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+  box-sizing: border-box;
+  position: relative;
+  user-select: none;
+}
+
+.dropdown-left {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #0A3D91;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.dropdown-left .material-icons {
+  color: #BFDBFE;
+  font-size: 20px;
+}
+
+.dropdown-left .material-symbols-outlined {
+  color: #BFDBFE;
+  font-size: 20px;
+}
+
+.dropdown-label {
+  color: #003367;
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 14px;
+}
+
+.dropdown-placeholder {
+  color: #B7C9FF;
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 16px;
+}
+
+.dropdown-right {
+  background-color: #F8FAFF;
+  border-radius: 10px;
+  padding: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  border: 0.59px solid #E8EEFF
+}
+
+.dropdown-right .material-icons {
+  color: #BFDBFE;
+  font-size: 28px;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  right: 0;
+  background: #fff;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  z-index: 999;
+}
+
+.dropdown-menu li {
+  padding: 8px 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.dropdown-menu li:hover {
+  background: #F1F5F9;
+}
+
+.custom-dropdown-wrapper {
+  position: relative;
+}
+
+
+
+
+/* detailed chart css */
+
+.dashboard-container {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+}
+
+.dashboard-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.chart-container {
+  background: #fff;
+  padding: 20px;
+}
+
+.filters-div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.filters {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.actions button {
+  background: #F5F8FF;
+  border: none;
+  border-radius: 12px;
+  padding: 5px 20px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 700;
+  border: 1px solid #E8EEFF;
+  color: #023E7D;
+  align-items: center;
+  display: flex;
+  gap: 8px;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background: #F5F8FF;
+  border-radius: 12px;
+  border: 0.59px solid #E8EEFF;
+  width: 377px;
+  height: 40px;
+  min-width: 200px;
+  padding: 2px 0;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  color: #1b3b6f;
+  font-size: 14px;
+  gap: 8px;
+}
+
+.search-icon {
+  background-color: white;
+  border-radius: 12px;
+  padding: 10px;
+  margin-right: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #023E7D;
+  border: 0.91px solid #E8EEFF;
+}
+
+.search-icon .material-icons {
+  font-size: 20px;
+}
+
+.search-label {
+  color: #1b3b6f;
+}
+
+.chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 20px;
+}
+
+.detailed-total-sales {
+  font-size: 20px;
+  color: #1b69c7;
+  font-weight: bold;
+}
+
+.chart-wrapper {
+  margin-top: 20px;
+}
+
+.dashboard-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  background-color: #f8fbff;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  font-size: 14px;
+  color: #1e293b;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.footer-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.pagination {
+  display: flex;
+  gap: 6px;
+}
+
+.pagination button {
+  padding: 8px 16px;
+  border: 1px solid #E8EEFF;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #023E7D;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pagination button:hover {
+  background: #e0efff;
+}
+
+.pagination .active {
+  border: 1px solid var(--Color, #023E7D);
+  font-weight: 700;
+}
+
+.rows-per-page {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.rows-per-page select {
+  padding: 6px 12px;
+  border-radius: 8px;
+  border: 1px solid #dbeafe;
+  background-color: #f0f4ff;
+  color: #023E7D;
+  font-weight: 500;
+  appearance: none;
+}
+
+.item-count {
+  color: #475569;
+  font-weight: 500;
+}
+
+.refresh-btn {
+  background-color: #ffffff;
+  border: 1px solid #dbeafe;
+  border-radius: 8px;
+  padding: 6px;
+  cursor: pointer;
+  color: #1b69c7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.refresh-btn:hover {
+  background-color: #e0efff;
+}
+
+
+.left-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.calender-div {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid #E8EEFF;
+  border-radius: 12px;
+  width: 212px;
+  height: 40px;
+  padding: 0 10px;
+}
+
+.calender-div .material-icons {
+  color: #CBDAFF;
+  font-size: 24px;
+}
+
+.calender-placeholder {
+  color: #B7C9FF;
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 18px;
+}
+
+.view-data-btn {
+  padding: 8px 20px;
+  background-color: #023E7D;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 600;
+  gap: 12px;
+}
+
+.view-data-btn .material-icons {
+  font-size: 24px;
+  color: #FFFFFF;
+}
+
+.view-data-btn:hover {
+  background-color: #1B69C7;
+}
+
+.underline_div2 {
+  width: 100%;
+  height: 2px;
+  background-color: #CCD8E5;
+  margin: 10px 0;
+  padding: 0;
+}
+
+
+
+/* common new css */
+.chart-box {
+  background: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+}
+
+.common-spacing {
+  margin-bottom: 45px;
+}
+
+/* new css */
+.order-status.chart-box {
+  padding: 20px 0;
+}
+
+.order-status.chart-box .header,
+.order-status.chart-box .chart-area {
+  padding: 0 20px;
+}
+
+.order-status.chart-box .underline_div {
+  margin: 0;
+}
+
+.general-health-stock {
+  display: flex;
+  width: 100%;
+  gap: 45px;
+}
+
+.general-health-stock .right-part {
+  max-width: 490px;
+}
+
+.time-frame {
+  display: flex;
+  width: 100%;
+  gap: 45px;
+}
+
+.time-frame .right-part {
+  max-width: 490px;
+}
+
+.details-card-content {
+  display: flex;
+  align-items: center;
+  column-gap: 40px;
+  row-gap: 20px;
+}
+
+@media (max-width:1340px) {
+  .general-health-stock {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  .time-frame {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+}
+
+@media (max-width:1200px) {
+  .details-card-content {
+    flex-wrap: wrap;
+  }
+
+  .details-card-content .stat-card {
+    max-width: 300px;
+  }
 }

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DataSync - Detailed Chart</title>
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../assets/css/fonts.css" />
+    <link rel="stylesheet" href="../assets/css/chartStyle.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0"></script>
+
+</head>
+
+<body>
+    <div class="dashboard-container">
+        <!-- Header -->
+        <div class="dashboard-header">
+            <div class="title" style="font-size: 30px;">Ürün Grubu</div>
+            <div class="underline_div2"></div>
+            <div class="filters-div">
+                <div class="filters">
+                    <div class="custom-dropdown-wrapper">
+                        <div class="custom-dropdown" id="groupDropdown">
+                            <div class="dropdown-left">
+                                <span class="dropdown-placeholder">Marka</span>
+                            </div>
+                            <div class="dropdown-right">
+                                <span class="material-icons">expand_more</span>
+                            </div>
+                        </div>
+                        <ul class="dropdown-menu" style="display: none;">
+                            <li data-key="marka">Marka</li>
+                            <li data-key="urun-grubu">Ürün Grubu</li>
+                            <li data-key="urun-adi">Ürün Adı</li>
+                        </ul>
+                    </div>
+                    <div class="custom-dropdown-wrapper">
+                        <div class="custom-dropdown" id="metricDropdown">
+                            <div class="dropdown-left">
+                                <span class="dropdown-placeholder">Kategori</span>
+                            </div>
+                            <div class="dropdown-right">
+                                <span class="material-icons">expand_more</span>
+                            </div>
+                        </div>
+                        <ul class="dropdown-menu" style="display: none;">
+                            <li data-key="kategori">Kategori</li>
+                            <li data-key="siparis">Sipariş</li>
+                            <li data-key="gelir">Gelir</li>
+                        </ul>
+                    </div>
+                    <div class="calender-div">
+                        <span class="material-icons">calendar_today</span>
+                        <span class="calender-placeholder">Takvim</span>
+                    </div>
+                </div>
+                <div>
+                    <button class="view-data-btn">
+                        <span class="material-icons">description</span>
+                        Veriyi Getir
+                    </button>
+                </div>
+            </div>
+            <div class="underline_div2"></div>
+            <div class="tabs" style="max-width: 1000px;">
+                <button class="tab">Tablo</button>
+                <button class="tab active">Grafik</button>
+                <button class="tab">Pazaryeri</button>
+            </div>
+            <div class="underline_div2"></div>
+            <div class="actions">
+                <button><span class="material-icons">content_copy</span>Kopyala</button>
+                <button><span class="material-icons">insert_drive_file</span>CSV</button>
+                <button class="export-btn" id="exportExcel" title="Export as PDF or Notes">
+                    <span class="material-icons">description</span>
+                </button>
+                <button><span class="material-icons">print</span>Yazdır</button>
+            </div>
+            <div class="left-actions">
+                <div class="search-bar">
+                    <div class="search-icon">
+                        <span class="material-icons">search</span>
+                    </div>
+                    <div class="search-label">Arama</div>
+                </div>
+                <button class="refresh-btn" onclick="location.reload()">
+                    <span class="material-icons">refresh</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="underline_div2"></div>
+        <div class="chart-container">
+            <div class="header">
+                <div>
+                    <div class="title">Toplam Sipariş Durumu <strong>(Satış)</strong></div>
+                    <div class="total-sales">$855.8K</div>
+                </div>
+                <div class="chart-controls">
+                    <div class="custom-dropdown-wrapper">
+                        <div class="custom-dropdown" id="groupDropdown">
+                            <div class="dropdown-left">
+                                <span class="material-icons">view_module</span>
+                                <span class="dropdown-label">Ürün Grubu</span>
+                            </div>
+                            <div class="dropdown-right">
+                                <span class="material-icons">expand_more</span>
+                            </div>
+                        </div>
+                        <ul class="dropdown-menu" style="display: none;">
+                            <li data-key="urun-grubu">Ürün Grubu</li>
+                            <li data-key="urun-adi">Ürün Adı</li>
+                            <li data-key="marka">Marka</li>
+                        </ul>
+                    </div>
+                    <div class="custom-dropdown-wrapper">
+                        <div class="custom-dropdown" id="metricDropdown">
+                            <div class="dropdown-left">
+                                <span class="material-icons">shopping_cart</span>
+                                <span class="dropdown-label">Satış</span>
+                            </div>
+                            <div class="dropdown-right">
+                                <span class="material-icons">expand_more</span>
+                            </div>
+                        </div>
+                        <ul class="dropdown-menu" style="display: none;">
+                            <li data-key="satis">Satış</li>
+                            <li data-key="siparis">Sipariş</li>
+                            <li data-key="gelir">Gelir</li>
+                        </ul>
+                    </div>
+                    <button class="export-btn" id="exportExcel" title="Export as PDF or Notes">
+                        <span class="material-icons">description</span>
+                    </button>
+                </div>
+            </div>
+            <div class="chart-area" style="height: 500px;">
+                <canvas id="orderChart" height="150"></canvas>
+            </div>
+        </div>
+
+        <div class="underline_div2"></div>
+        <div class="dashboard-footer">
+            <div class="footer-content">
+                <div class="pagination">
+                    <button><span class="material-icons">keyboard_double_arrow_left</span></button>
+                    <button><span class="material-icons">keyboard_arrow_left</span></button>
+                    <button class="active">1</button>
+                    <button>2</button>
+                    <button>3</button>
+                    <button>4</button>
+                    <button>5</button>
+                    <button><span class="material-icons">keyboard_arrow_right</span></button>
+                    <button><span class="material-icons">keyboard_double_arrow_right</span></button>
+                </div>
+                <div class="rows-per-page">
+                    <div class="custom-dropdown-wrapper">
+                        <div class="custom-dropdown" id="groupDropdown" style="width: 100px;">
+                            <div class="dropdown-left">
+                                <span class="dropdown-label">20</span>
+                            </div>
+                            <div class="dropdown-right">
+                                <span class="material-icons">expand_more</span>
+                            </div>
+                        </div>
+                        <ul class="dropdown-menu" style="display: none;">
+                            <li data-key="20">20</li>
+                            <li data-key="50">50</li>
+                            <li data-key="100">100</li>
+                        </ul>
+                    </div>
+                    <span>Sayfa başına öğe</span>
+                </div>
+            </div>
+            <div class="footer-actions">
+                <div class="item-count">1 - 20 ürün arasında</div>
+                <button class="refresh-btn" onclick="location.reload()">
+                    <span class="material-icons">refresh</span>
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="../assets/js/charts/sales-order-status-chart.js"></script>
+</body>
+
+</html>

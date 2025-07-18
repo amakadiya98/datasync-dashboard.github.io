@@ -23,7 +23,7 @@ $(document).ready(function () {
                     backgroundColor: '#1B69C7',
                     borderRadius: 8,
                     barThickness: 16,
-                    yAxisID: 'y',   
+                    yAxisID: 'y',
                 },
                 {
                     type: 'line',
@@ -33,7 +33,6 @@ $(document).ready(function () {
                     backgroundColor: gradient,
                     fill: true,
                     yAxisID: 'y1',
-                    pointRadius: 4,
                     pointStyle: 'circle',
                     pointRadius: 6,
                     pointBorderColor: '#FFFFFF',
@@ -56,6 +55,11 @@ $(document).ready(function () {
                     labels: {
                         usePointStyle: true,
                         pointStyle: 'rectRounded',
+                        color: '#003367',
+                        font: {
+                            size: 14,
+                            weight: '500'
+                        }
                     }
                 },
                 tooltip: {
@@ -89,7 +93,7 @@ $(document).ready(function () {
                 },
                 x: {
                     grid: {
-                        color: '#e5e7eb'
+                        display: false
                     },
                     ticks: {
                         color: '#A3AED0'

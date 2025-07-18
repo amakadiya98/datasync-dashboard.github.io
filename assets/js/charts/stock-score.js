@@ -17,15 +17,15 @@ $(document).ready(function () {
             maintainAspectRatio: false,
             plugins: {
                 legend: {
-                    position: 'bottom',
+                    position: 'top',
                     labels: {
                         usePointStyle: true,
                         pointStyle: 'rectRounded',
+                        color: '#003367',
                         font: {
-                            size: 13,
-                            weight: '700'
-                        },
-                        color: '#023E7D',
+                            size: 14,
+                            weight: '500'
+                        }
                     }
                 },
                 tooltip: {

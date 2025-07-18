@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Datasync filter</title>
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../assets/css/fonts.css" />
+    <link rel="stylesheet" href="../assets/css/filter.css" />
+</head>
+
+<body>
+
+    <div class="filter-section">
+        <div class="filter-content">
+
+            <!-- Calendar Icon -->
+            <button class="icon-btn">
+                <img src="/assets/images/calender.svg" alt="Calendar" width="28" height="30" />
+            </button>
+
+            <!-- Filter Buttons -->
+            <button class="filter-btn">Günlük</button>
+            <button class="filter-btn">Haftalık</button>
+            <button class="filter-btn active">Aylık</button>
+            <button class="filter-btn">Yıllık</button>
+            <button class="filter-btn">Son 30 Gün</button>
+
+            <!-- Divider -->
+            <div class="divider"></div>
+
+            <!-- Custom Filter -->
+            <div class="custom-dropdown-wrapper">
+                <div class="custom-dropdown">
+                    <div class="left">
+                        <img src="../assets/images/filter.svg" alt="Filter" width="17" height="16" />
+                        <span class="filter-title">Özel Filtreleme</span>
+                    </div>
+                    <div class="arrow-box">
+                        <img class="dropdown-arrow" src="../assets/images/bluedown-arrow.svg" alt="Dropdown" width="11"
+                            height="6" />
+                    </div>
+                </div>
+
+                <div class="dropdown-panel">
+                    <div class="dropdown-flex">
+                        <div class="calendar-area d-flex gap-4 p-2 ">
+                            <div id="calendar-container" class="calendar-left "></div>
+
+                            <div class="calendar-controls">
+                                <div class="d-flex gap-2 mb-5">
+                                    <select id="monthSelect" class="form-select shadow-none " style="font-size: 20px; font-weight: 700; color: #023E7D;"></select>
+                                    <select id="yearSelect" class="form-select shadow-none" style="font-size: 20px; font-weight: 500; color: #023E7D;"></select>
+                                </div>
+                                <div class="d-flex gap-2 align-items-center ">
+                                    <select id="startHour" class="form-select time-select"></select> :
+                                    <select id="startMinute" class="form-select time-select"></select>
+                                    <span class="mx-1">-</span>
+                                    <select id="endHour" class="form-select time-select"></select> :
+                                    <select id="endMinute" class="form-select time-select"></select>
+                                </div>
+                                <div class="selected-range-box">
+                                    27/04/25 18:25 - 30/04/25 19:30
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main-right">
+                            <div class="button-area">
+                                <div class="all-btn">Pazaryeri</div>
+                                <div class="all-btn">Marka</div>
+                                <div class="all-btn">Kategori</div>
+                                <div class="all-btn">Cari</div>
+                                <div class="all-btn">Ürün Kodu</div>
+                                <div class="all-btn">ML</div>
+                                <div class="all-btn">Aroma</div>
+                                <div class="all-btn">Ürün Grubu</div>
+                                <div class="all-btn">Renk</div>
+                                <div class="all-btn">Özellik</div>
+                                <div class="all-btn">Yaş</div>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-center gap-2 custom-blue">
+                                <img src="../assets/images/whitefilter.svg" alt="">
+                                <div>Filtrele</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- DROPDOWN PANEL END -->
+            </div>
+
+
+        </div>
+    </div>
+    <script src="../assets/js/filter/filter.js"></script>
+</body>
+
+</html>

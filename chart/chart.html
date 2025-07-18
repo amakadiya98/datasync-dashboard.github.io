@@ -9,8 +9,6 @@
     <link rel="stylesheet" href="../assets/css/fonts.css" />
     <link rel="stylesheet" href="../assets/css/chartStyle.css" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
 
 <body>
@@ -18,7 +16,7 @@
         <div class="header">
             <div class="title">Sipariş Durumu <strong>(Satış)</strong></div>
             <button class="refresh-btn" onclick="location.reload()">
-                <span class="material-icons">refresh</span>
+                <img src="../assets/images/refresh.svg" alt="icon" />
             </button>
         </div>
         <div class="underline_div"></div>
@@ -39,7 +37,7 @@
         <div class="header">
             <div class="title">Genel Stok Sağlık</div>
             <button class="refresh-btn" onclick="location.reload()">
-                <span class="material-icons">refresh</span>
+                <img src="../assets/images/refresh.svg" alt="icon" />
             </button>
         </div>
         <div class="underline_div"></div>
@@ -51,10 +49,10 @@
         </div>
         <div class="underline_div"></div>
         <div class="chart-wrapper">
-            <div id="graphView">
+            <div id="graphView" class="graphView">
                 <canvas id="stockHealthChart"></canvas>
             </div>
-            <div id="tableView">
+            <div id="tableView" class="tableView">
                 Table
             </div>
         </div>
@@ -80,7 +78,7 @@
         <div class="header">
             <div class="title">Zaman Dilimi</div>
             <button class="refresh-btn" onclick="location.reload()">
-                <span class="material-icons">refresh</span>
+                <img src="../assets/images/refresh.svg" alt="icon" />
             </button>
         </div>
         <div class="underline_div"></div>
@@ -89,10 +87,591 @@
         </div>
     </div>
 
-    <script src="../assets/js/sales-order.js"></script>
-    <script src="../assets/js/stock-health.js"></script>
-    <script src="../assets/js/stock-score.js"></script>
-    <script src="../assets/js/time-series.js"></script>
+    <div class="container" style="margin-top: 40px;">
+        <div class="header">
+            <div class="title">Yeni Müşteri vs Tekrar Müşteri Sayısı</div>
+            <button class="refresh-btn" onclick="location.reload()">
+                <img src="../assets/images/refresh.svg" alt="icon" />
+            </button>
+        </div>
+        <div class="underline_div"></div>
+        <div class="chart-area" style="height: 400px;">
+            <canvas id="customerChart"></canvas>
+        </div>
+    </div>
+
+    <div class="container" style="margin-top: 40px;">
+        <div class="header">
+            <div class="title">Haftalık Görüntülenme Ve Satış Adetleri</div>
+            <div class="header-controls">
+                <select class="month-select">
+                    <option selected>Haziran 2025</option>
+                    <option selected>Haziran 2024</option>
+                </select>
+                <button class="refresh-btn" onclick="location.reload()">
+                    <img src="../assets/images/refresh.svg" alt="icon" />
+                </button>
+            </div>
+        </div>
+        <div class="underline_div"></div>
+        <div class="chart-area" style="height: 400px;">
+            <canvas id="weeklySalesChart"></canvas>
+        </div>
+    </div>
+
+    <div class="container" style="margin-top: 40px;">
+        <div class="header">
+            <div class="title">Yaşa Göre Performans</div>
+            <button class="refresh-btn" onclick="location.reload()">
+                <img src="../assets/images/refresh.svg" alt="icon" />
+            </button>
+        </div>
+        <div class="underline_div"></div>
+        <div class="chart-area" style="height: 500px;">
+            <canvas id="agePerformanceChart"></canvas>
+        </div>
+    </div>
+
+    <div class="container" style="margin-top: 40px;">
+        <div class="header">
+            <div class="title">Ortalama Fiyat ve Adetler</div>
+            <div class="right-side">
+                <div class="price-quantity-tabs">
+                    <div class="date-filter" onclick="document.getElementById('priceDatePicker').showPicker()">
+                        <i class="material-icons" id="calendarIcon" style="cursor: pointer;">calendar_today</i>
+                        <input type="date" id="priceDatePicker" class="calendar-input" />
+                    </div>
+
+                    <button class="price-quantity-tab">Günlük</button>
+                    <button class="price-quantity-tab">Haftalık</button>
+                    <button class="price-quantity-tab">Aylık</button>
+                    <button class="price-quantity-tab active">Yıllık</button>
+                    <button class="price-quantity-tab">Son 30 Gün</button>
+                </div>
+            </div>
+        </div>
+        <div class="channel-tabs">
+            <button class="tab active">Genel </button>
+            <button class="tab">hepsiburada</button>
+            <button class="tab">trendyol</button>
+            <button class="tab">n11</button>
+            <button class="tab">pazarama</button>
+            <button class="tab">
+                <img src="../assets/images/amazon.png" alt="Amazon Logo" style="width: 65px" />
+            </button>
+            <button class="tab">b2b</button>
+            <button class="tab">beymen</button>
+            <button class="tab">ideasoft</button>
+            <button class="tab">commerce</button>
+            <button class="tab">boyner</button>
+        </div>
+        <div class="underline_div"></div>
+        <div class="chart-area" style="height: 600px;">
+            <canvas id="priceQuantityChart"></canvas>
+        </div>
+    </div>
+
+    <div class="container" style="margin-top: 40px; max-width: 700px;">
+        <div class="header">
+            <div class="title">Stok & Maliyet Durum Analizi</div>
+            <div class="view-toggle-wrapper">
+                <div class="view-toggle">
+                    <label class="switch">
+                        <input type="checkbox" id="toggleTableView">
+                        <span class="slider"></span>
+                    </label>
+                    <span class="view-label">Tablo Görünümü</span>
+                </div>
+                <button class="refresh-btn" onclick="location.reload()">
+                    <img src="../assets/images/refresh.svg" alt="icon" />
+                </button>
+            </div>
+        </div>
+        <div class="underline_div"></div>
+        <div class="chart-area" style="height: 300px;">
+            <canvas id="stockCostChart"></canvas>
+        </div>
+    </div>
+
+    <div class="container" style="margin-top: 20px;">
+        <div class="header">
+            <div class="title">Ortalama Sepet Tutarı</div>
+            <button class="refresh-btn" onclick="location.reload()">
+                <img src="../assets/images/refresh.svg" alt="icon" />
+            </button>
+        </div>
+        <div class="underline_div"></div>
+        <div class="chart-area" style="height: 600px;">
+            <canvas id="averageBasketChart"></canvas>
+        </div>
+    </div>
+
+    <div class="container" style="margin-top: 40px">
+        <div class="header">
+            <div class="title">90 Gün Stok Maliyet Raporu (Marka)</div>
+            <button class="refresh-btn" onclick="location.reload()">
+                <img src="../assets/images/refresh.svg" alt="icon" />
+            </button>
+        </div>
+        <div class="underline_div"></div>
+        <div class="inventory-cost-container-brand">
+            <div class="tabs">
+                <button class="tab" data-type="table">Tablo</button>
+                <button class="tab active" data-type="graph">Grafik</button>
+            </div>
+        </div>
+        <div class="underline_div"></div>
+        <div class="chart-wrapper">
+            <div id="inventoryGraphViewBrand" class="graphView">
+                <canvas id="inventoryCostChartBrand"></canvas>
+            </div>
+            <div id="inventoryTableViewBrand" class="tableView">
+                Table
+            </div>
+        </div>
+    </div>
+
+    <div class="container" style="margin-top: 40px">
+        <div class="header">
+            <div class="title">90 Gün Stok Maliyet Raporu (Kategori)</div>
+            <button class="refresh-btn" onclick="location.reload()">
+                <img src="../assets/images/refresh.svg" alt="icon" />
+            </button>
+        </div>
+        <div class="underline_div"></div>
+        <div class="inventory-cost-container-category">
+            <div class="tabs">
+                <button class="tab" data-type="table">Tablo</button>
+                <button class="tab active" data-type="graph">Grafik</button>
+            </div>
+        </div>
+        <div class="underline_div"></div>
+        <div class="chart-wrapper">
+            <div id="inventoryGraphViewCategory" class="graphView">
+                <canvas id="inventoryCostChartCategory"></canvas>
+            </div>
+            <div id="inventoryTableViewCategory" class="tableView">
+                Table
+            </div>
+        </div>
+    </div>
+
+    <div class="container" style="margin-top: 40px;">
+        <div class="header">
+            <div class="title">
+                Kanal Bazlı Performans
+            </div>
+            <div class="filters">
+                <button class="filter-tab active" data-type="maliyet">Maliyet</button>
+                <button class="filter-tab" data-type="goruntulenme">Görüntülenme</button>
+                <button class="filter-tab" data-type="donusum">Dönüşüm Oranı</button>
+                <button class="filter-tab" data-type="tiklama">Tıklama</button>
+                <button class="filter-tab" data-type="oturumlar">Oturumlar</button>
+                <button class="filter-tab" data-type="cpc">CPC</button>
+            </div>
+        </div>
+        <div class="underline_div"></div>
+        <div class="chart-area" style="height: 500px;">
+            <canvas id="channelPerformanceChart"></canvas>
+        </div>
+    </div>
+
+    <div class="container" style="margin-top: 40px;">
+        <div class="header">
+            <div class="title">Marka Bazlı Rapor</div>
+            <div class="view-toggle-wrapper">
+                <div class="view-toggle">
+                    <label class="switch">
+                        <input type="checkbox" id="toggleTableView">
+                        <span class="slider"></span>
+                    </label>
+                    <span class="view-label">Tablo Görünümü</span>
+                </div>
+                <button class="refresh-btn" onclick="location.reload()">
+                    <img src="../assets/images/refresh.svg" alt="icon" />
+                </button>
+            </div>
+        </div>
+        <div class="underline_div"></div>
+        <div class="week-filter-container">
+            <div class="week-filter-title">Görüntülenme</div>
+            <div class="week-chip-wrapper">
+                <div class="week-chip" style="--accent: #1B69C7">
+                    <div class="chip-strip"></div>
+                    <div class="chip-content">
+                        <div class="chip-text">
+                            <strong>10.Hafta</strong>
+                            <span>(3.03 - 9.03)</span>
+                        </div>
+                        <div class="chip-divider"></div>
+                        <div class="chip-text">
+                            <strong>10.Hafta</strong>
+                            <span>(3.03 - 9.03)</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="week-chip" style="--accent: #FFC283">
+                    <div class="chip-strip"></div>
+                    <div class="chip-content">
+                        <div class="chip-text">
+                            <strong>10.Hafta</strong>
+                            <span>(3.03 - 9.03)</span>
+                        </div>
+                        <div class="chip-divider"></div>
+                        <div class="chip-text">
+                            <strong>10.Hafta</strong>
+                            <span>(3.03 - 9.03)</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="week-chip" style="--accent: #023E7D">
+                    <div class="chip-strip"></div>
+                    <div class="chip-content">
+                        <div class="chip-text">
+                            <strong>10.Hafta</strong>
+                            <span>(3.03 - 9.03)</span>
+                        </div>
+                        <div class="chip-divider"></div>
+                        <div class="chip-text">
+                            <strong>10.Hafta</strong>
+                            <span>(3.03 - 9.03)</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="week-chip" style="--accent: #CCD8E5">
+                    <div class="chip-strip"></div>
+                    <div class="chip-content">
+                        <div class="chip-text">
+                            <strong>10.Hafta</strong>
+                            <span>(3.03 - 9.03)</span>
+                        </div>
+                        <div class="chip-divider"></div>
+                        <div class="chip-text">
+                            <strong>10.Hafta</strong>
+                            <span>(3.03 - 9.03)</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="week-chip" style="--accent: #8970BD">
+                    <div class="chip-strip"></div>
+                    <div class="chip-content">
+                        <div class="chip-text">
+                            <strong>10.Hafta</strong>
+                            <span>(3.03 - 9.03)</span>
+                        </div>
+                        <div class="chip-divider"></div>
+                        <div class="chip-text">
+                            <strong>10.Hafta</strong>
+                            <span>(3.03 - 9.03)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="week-filter-container">
+            <div class="week-filter-title">Gelir</div>
+            <div class="week-chip-wrapper">
+                <div class="week-chip" style="--accent: #F4705D">
+                    <div class="chip-strip"></div>
+                    <div class="chip-content">
+                        <div class="chip-text">
+                            <strong>10.Hafta</strong>
+                            <span>(3.03 - 9.03)</span>
+                        </div>
+                        <div class="chip-divider"></div>
+                        <div class="chip-text">
+                            <strong>10.Hafta</strong>
+                            <span>(3.03 - 9.03)</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="week-chip" style="--accent: #EB749E">
+                    <div class="chip-strip"></div>
+                    <div class="chip-content">
+                        <div class="chip-text">
+                            <strong>10.Hafta</strong>
+                            <span>(3.03 - 9.03)</span>
+                        </div>
+                        <div class="chip-divider"></div>
+                        <div class="chip-text">
+                            <strong>10.Hafta</strong>
+                            <span>(3.03 - 9.03)</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="week-chip" style="--accent: #7A9966">
+                    <div class="chip-strip"></div>
+                    <div class="chip-content">
+                        <div class="chip-text">
+                            <strong>10.Hafta</strong>
+                            <span>(3.03 - 9.03)</span>
+                        </div>
+                        <div class="chip-divider"></div>
+                        <div class="chip-text">
+                            <strong>10.Hafta</strong>
+                            <span>(3.03 - 9.03)</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="week-chip" style="--accent: #F68E52">
+                    <div class="chip-strip"></div>
+                    <div class="chip-content">
+                        <div class="chip-text">
+                            <strong>10.Hafta</strong>
+                            <span>(3.03 - 9.03)</span>
+                        </div>
+                        <div class="chip-divider"></div>
+                        <div class="chip-text">
+                            <strong>10.Hafta</strong>
+                            <span>(3.03 - 9.03)</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="week-chip" style="--accent: #BA0081">
+                    <div class="chip-strip"></div>
+                    <div class="chip-content">
+                        <div class="chip-text">
+                            <strong>10.Hafta</strong>
+                            <span>(3.03 - 9.03)</span>
+                        </div>
+                        <div class="chip-divider"></div>
+                        <div class="chip-text">
+                            <strong>10.Hafta</strong>
+                            <span>(3.03 - 9.03)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="height: 400px;">
+            <canvas id="brandReportChart"></canvas>
+        </div>
+    </div>
+
+    <div class="container" style="margin-top: 20px;">
+        <div class="header">
+            <div class="title">Ülke</div>
+            <button class="refresh-btn" onclick="location.reload()">
+                <img src="../assets/images/refresh.svg" alt="icon" />
+            </button>
+        </div>
+        <div class="underline_div"></div>
+        <div class="chart-area" style="height: 500px;">
+            <canvas id="countryProgressChart"></canvas>
+        </div>
+    </div>
+
+    <div class="container" style="margin-top: 20px;">
+        <div class="header">
+            <div class="title">Şehir</div>
+            <button class="refresh-btn" onclick="location.reload()">
+                <img src="../assets/images/refresh.svg" alt="icon" />
+            </button>
+        </div>
+        <div class="underline_div"></div>
+        <div class="chart-area" style="height: 600px;">
+            <canvas id="cityProgressChart"></canvas>
+        </div>
+    </div>
+
+    <div class="container" style="margin-top: 40px;">
+        <div class="header">
+            <div class="title">Trafik Kaynağına Göre performans Analizi</div>
+            <div class="view-toggle-wrapper">
+                <div class="view-toggle">
+                    <label class="switch">
+                        <input type="checkbox" id="toggleTableView">
+                        <span class="slider"></span>
+                    </label>
+                    <span class="view-label">Grafik Görünümü</span>
+                </div>
+                <button class="refresh-btn" onclick="location.reload()">
+                    <img src="../assets/images/refresh.svg" alt="icon" />
+                </button>
+            </div>
+        </div>
+        <div class="underline_div"></div>
+        <div style="height: 400px;">
+            <canvas id="trafficPerformanceChart"></canvas>
+        </div>
+    </div>
+
+    <div class="container" style="margin-top: 40px;">
+        <div class="header">
+            <div class="title">Gün Bazlı Performans Verisi</div>
+            <button class="refresh-btn" onclick="location.reload()">
+                <img src="../assets/images/refresh.svg" alt="icon" />
+            </button>
+        </div>
+        <div class="underline_div"></div>
+        <div class="chart-area" style="height: 500px;">
+            <canvas id="dailyPerformanceChart"></canvas>
+        </div>
+    </div>
+
+    <div class="container" style="margin-top: 40px;">
+        <div class="header">
+            <div class="title">Toplam Yorum Sayısı</div>
+            <button class="refresh-btn" onclick="location.reload()">
+                <img src="../assets/images/refresh.svg" alt="icon" />
+            </button>
+        </div>
+        <div class="underline_div"></div>
+        <div class="chart-area" style="height: 500px;">
+            <canvas id="commentReportChart"></canvas>
+        </div>
+    </div>
+
+    <div class="container" style="margin-top: 40px;">
+        <div class="header">
+            <div class="title">Toplam Pozitif ve Negatif Yorum Sayısı</div>
+            <button class="refresh-btn" onclick="location.reload()">
+                <img src="../assets/images/refresh.svg" alt="icon" />
+            </button>
+        </div>
+        <div class="underline_div"></div>
+        <div class="chart-area" style="height: 500px;">
+            <canvas id="commentCategoriseReportChart"></canvas>
+        </div>
+    </div>
+
+    <div class="container" style="margin-top: 40px;">
+        <div class="header">
+            <div class="title">İade Adet Grafiği</div>
+            <button class="refresh-btn" onclick="location.reload()">
+                <img src="../assets/images/refresh.svg" alt="icon" />
+            </button>
+        </div>
+        <div class="underline_div"></div>
+        <div class="monthly-details">
+            <div>
+                <span class="month-label">Bu Son Aylar</span>
+                <span class="month-value" style="color: #1B69C7;">210</span>
+            </div>
+            <div>
+                <span class="month-label">Geçen Son Aylar</span>
+                <span class="month-value" style="color: #FFC283;">304</span>
+            </div>
+        </div>
+        <div class="chart-area" style="height: 500px;">
+            <canvas id="returnQuantityChart"></canvas>
+        </div>
+    </div>
+
+    <div class="container" style="margin-top: 40px;">
+        <div class="header">
+            <div class="title">İade Oranı Grafiği</div>
+            <button class="refresh-btn" onclick="location.reload()">
+                <img src="../assets/images/refresh.svg" alt="icon" />
+            </button>
+        </div>
+        <div class="underline_div"></div>
+        <div class="monthly-details">
+            <div>
+                <span class="month-label">Bu Son Aylar</span>
+                <span class="month-value" style="color: #1B69C7;">% 41.28</span>
+            </div>
+            <div>
+                <span class="month-label">Geçen Son Aylar</span>
+                <span class="month-value" style="color: #FFC283;">% 48.91</span>
+            </div>
+        </div>
+        <div class="chart-area" style="height: 500px;">
+            <canvas id="returnRateChart"></canvas>
+        </div>
+    </div>
+
+    <div class="container" style="margin-top: 40px;">
+        <div class="header">
+            <div class="title">Ortalama Sepet Adeti</div>
+            <button class="refresh-btn" onclick="location.reload()">
+                <img src="../assets/images/refresh.svg" alt="icon" />
+            </button>
+        </div>
+        <div class="underline_div"></div>
+        <div class="chart-area" style="height: 500px;">
+            <canvas id="basketChart"></canvas>
+        </div>
+    </div>
+
+    <div class="container" style="margin-top: 40px;">
+        <div class="header">
+            <div class="title">Performans Karşılaştırma Analizi</div>
+            <button class="refresh-btn" onclick="location.reload()">
+                <img src="../assets/images/refresh.svg" alt="icon" />
+            </button>
+        </div>
+        <div class="underline_div"></div>
+        <div class="chart-area" style="height: 500px;">
+            <canvas id="performanceChart"></canvas>
+        </div>
+    </div>
+
+    <div class="container" style="margin-top: 40px;">
+        <div class="header">
+            <div>
+                <div class="title">Toplam Sipariş Durumu <strong>(Satış)</strong></div>
+                <div class="total-sales">$855.8K</div>
+            </div>
+            <div class="chart-controls">
+                <div class="custom-dropdown-wrapper">
+                    <div class="custom-dropdown" id="metricDropdown">
+                        <div class="dropdown-left">
+                            <span class="material-icons">shopping_cart</span>
+                            <span class="dropdown-label">Satış</span>
+                        </div>
+                        <div class="dropdown-right">
+                            <span class="material-icons">expand_more</span>
+                        </div>
+                    </div>
+                    <ul class="dropdown-menu" style="display: none;">
+                        <li data-key="satis">Satış</li>
+                        <li data-key="siparis">Sipariş</li>
+                        <li data-key="gelir">Gelir</li>
+                    </ul>
+                </div>
+
+                <button class="export-btn" id="exportExcel" title="Export as PDF or Notes">
+                    <span class="material-icons">description</span>
+                </button>
+            </div>
+
+        </div>
+        <div class="underline_div"></div>
+        <div class="chart-area" style="height: 500px;">
+            <canvas id="orderChart" height="150"></canvas>
+        </div>
+    </div>
+    <script src="../assets/js/jquery-3.6.0.min.js"></script>
+    <script src="../assets/js/charts-js-net/chart.js"></script>
+    <script src="../assets/js/charts-js-net/chartjs-plugin-datalabels.js"></script>
+    <script src="../assets/js/charts-js-net/chartjs-plugin-datalabels@2.2.0.js"></script>
+    <script src="../assets/js/charts/sales-order.js"></script>
+    <script src="../assets/js/charts/stock-health.js"></script>
+    <script src="../assets/js/charts/stock-score.js"></script>
+    <script src="../assets/js/charts/time-series.js"></script>
+    <script src="../assets/js/charts/customer-chart.js"></script>
+    <script src="../assets/js/charts/weekly-sales-chart.js"></script>
+
+    <script src="../assets/js/charts/age-performance-chart.js"></script>
+    <script src="../assets/js/charts/price-quantity-chart.js"></script>
+    <script src="../assets/js/charts/stock-cost-chart.js"></script>
+    <script src="../assets/js/charts/average-basket-chart.js"></script>
+    <script src="../assets/js/charts/inventory-cost-chart-brand.js"></script>
+    <script src="../assets/js/charts/inventory-cost-chart-category.js"></script>
+    <script src="../assets/js/charts/channel-performance-chart.js"></script>
+    <script src="../assets/js/charts/brand-report-chart.js"></script>
+    <script src="../assets/js/charts/country-progress-chart.js"></script>
+    <script src="../assets/js/charts/city-progress-chart.js"></script>
+    <script src="../assets/js/charts/traffic-performance-chart.js"></script>
+    <script src="../assets/js/charts/daily-performance-chart.js"></script>
+    <script src="../assets/js/charts/comment-report-chart.js"></script>
+    <script src="../assets/js/charts/comment-categorise-report-chart.js"></script>
+    <script src="../assets/js/charts/return-quantity-chart.js"></script>
+    <script src="../assets/js/charts/return-rate-chart.js"></script>
+    <script src="../assets/js/charts/basket-chart.js"></script>
+    <script src="../assets/js/charts/performance-analysis-chart.js"></script>
+    <script src="../assets/js/charts/sales-order-status-chart.js"></script>
 </body>
 
 </html>

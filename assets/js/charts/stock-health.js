@@ -43,6 +43,11 @@ $(document).ready(function () {
                 labels: {
                     usePointStyle: true,
                     pointStyle: 'rectRounded',
+                    color: '#003367',
+                    font: {
+                        size: 14,
+                        weight: '500'
+                    }
                 }
             },
             tooltip: {
@@ -100,5 +105,4 @@ $(document).ready(function () {
             $('#tableView').show();
         }
     });
-
 });
