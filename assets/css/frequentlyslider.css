@@ -1,0 +1,118 @@
+.frequently-page {
+    border: 1px solid #CCD8E5;
+    background-color: #FFFFFF;
+    height: 374px;
+    border-radius: 20px;
+    padding: 13px 30px;
+    max-width: 1580px;
+    width: 100%;
+    display: flex;
+}
+
+.frequently-page .owl-stage-outer {
+    position: relative;
+}
+
+.frequently-page .owl-item::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    bottom: 10px;
+    left: 0;
+    width: 1px;
+    background-color: #D4DFFF;
+    z-index: 5;
+}
+
+.slide-1 {
+    max-width: 762px;
+    width: 100%;
+    height: 348px;
+    display: flex;
+    align-items: center;
+    padding: 13px 30px;
+    background-color: #fff;
+    border-radius: 20px;
+    transition: background-color 0.3s;
+}
+
+.slide-1.active-item {
+    background-color: #F5F8FF;
+    border: 1px solid #CCD8E5;
+}
+
+.owl-controls-wrapper {
+    max-width: 1580px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    gap: 20px;
+}
+
+.owl-controls-wrapper .arrow-left,
+.owl-controls-wrapper .arrow-right {
+    display: flex;
+    align-items: center;
+}
+
+.owl-controls-wrapper .dots-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.owl-prev,
+.owl-next {
+    width: 47px;
+    height: 47px;
+    border-radius: 12px;
+    background-color: #F5F8FF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.owl-dot,
+.owl-prev,
+.owl-next,
+button {
+    outline: none !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.owl-dot {
+    background-color: transparent !important;
+}
+
+.owl-dot span {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background: #F5F8FF;
+    border: 1px solid #CDDAFF;
+    display: inline-block;
+}
+
+.owl-dot.active span {
+    background: #003087;
+}
+
+
+.slide-1 p {
+    color: #747C98;
+    margin-left: 62px;
+    font-weight: 500;
+    font-size: 30px;
+    max-width: 492px;
+}
+
+.slide-1 h1 {
+    color: #023E7D;
+    margin-left: 62px;
+    font-weight: 700;
+    font-size: 30px;
+}

@@ -1,0 +1,678 @@
+.product-card {
+  position: relative;
+  width: 100%;
+  border-radius: 20px;
+  border: 1px solid #CCD8E5;
+  background-color: #FFFFFF;
+  box-shadow: 0px 4px 20px rgba(17, 38, 146, 0.05);
+  margin: 10px auto;
+}
+
+/* card1 */
+.product-card.size-1 {
+  max-width: 507px;
+  height: 340px;
+}
+
+.right-button {
+  position: absolute;
+  width: 153px;
+  height: 45px;
+  display: flex;
+  padding-left: 12px;
+  gap: 13px;
+  align-items: center;
+  border: 1px solid #CCD8E5;
+  border-radius: 11px;
+  background-color: #F4F7FE;
+}
+
+.pos-1 {
+  top: 7px;
+  right: 8px;
+}
+
+.right-button img {
+  width: 22px;
+  height: 21.98px;
+}
+
+.right-button span {
+  color: #023E7D;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.product-header {
+  margin-top: 27px;
+  margin-left: 135px;
+  margin-right: 54px;
+  height: 78px;
+}
+
+h4 {
+  font-weight: 700;
+  color: #023E7D;
+  margin: 0;
+  font-size: 20px;
+}
+
+p {
+  font-size: 18px;
+  color: #747C98;
+  font-weight: 500;
+  margin-top: 3px;
+}
+
+.brand-button {
+  margin-left: 135px;
+  display: flex;
+  gap: 9px;
+  margin-bottom: 26px;
+  margin-top: 10px;
+}
+
+.brand1 {
+  width: 88px;
+  height: 39px;
+  border: 1px solid #E8EEFF;
+  background-color: #F5F8FF;
+  border-radius: 11.26px;
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  font-weight: 500;
+  color: #023E7D;
+  justify-content: center;
+}
+
+.brand2 {
+  width: 112px;
+  height: 39px;
+  border: 1px solid #E8EEFF;
+  background-color: #F5F8FF;
+  border-radius: 11.26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.brand2 button {
+  width: 99.63px;
+  height: 25.82px;
+  border-radius: 5.26px;
+  border: 1px solid #CCD8E5;
+  background-color: #FFFFFF;
+}
+
+.bottel {
+  position: absolute;
+  top: 30px;
+  left: 20px;
+}
+
+.bottel img {
+  width: 91.2px;
+  height: 126px
+}
+
+.card-info {
+  display: flex;
+  gap: 9px;
+  margin: 0 14px;
+}
+
+.info-card {
+  background-color: #FFFFFF;
+  border-radius: 12px;
+  border: 1px solid #E8EEFF;
+  height: 79px;
+}
+
+.info-card.card1 {
+  width: 80px;
+}
+
+.info-card.card2 {
+  width: 73px;
+}
+
+.info-card.card3 {
+  width: 69px;
+}
+
+.info-card.card4 {
+  width: 120px;
+}
+
+.info-card.card5 {
+  width: 101px;
+}
+
+.info-label {
+  color: #094DB1;
+  font-size: 13px;
+  font-weight: 700;
+  text-align: center;
+  background-color: #F5F8FF;
+  border: 1px solid #E8EEFF;
+  border-radius: 12px;
+}
+
+.info-value {
+  color: #023E7D;
+  font-size: 15px;
+  font-weight: 500;
+  margin-top: 9px;
+  text-align: center;
+}
+
+.custom-buttons {
+  display: flex;
+  margin: 15.5px 14px 20.5px 14px;
+  gap: 20.96px;
+}
+
+.card-button {
+  width: 145.69px;
+  height: 45px;
+  border-radius: 12px;
+  font-weight: 500;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bg-blue {
+  background-color: #023E7D;
+  color: #FFFFFF;
+}
+
+.bg-yellow {
+  background-color: #FFC283;
+  color: #023E7D;
+}
+
+.bg-red {
+  background-color: #E31A1A;
+  color: #FFFFFF;
+}
+
+
+/* card2 */
+
+.product-card.size-2 {
+  max-width: 507px;
+  height: 340px;
+}
+
+.size1-header {
+  color: #A3AED0;
+  font-size: 20px;
+  font-weight: 700;
+  margin: 14px 0 0 17px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 11px;
+  right: 9px;
+  background-color: #F4F7FE;
+  border-radius: 11px;
+  border: 1px solid #CCD8E5;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bottel-img {
+  margin: 5px 0 0 20px;
+}
+
+.product-header2 {
+  position: absolute;
+  top: 69px;
+  left: 135px;
+}
+
+.product2-button {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin: 10px 0 0 8px;
+}
+
+.btn-content {
+  display: flex;
+  align-items: center;
+  background-color: #FFFFFF;
+  border: 1px solid #E8EEFF;
+  border-radius: 13.33px;
+  width: 242px;
+  height: 45px;
+}
+
+.custom-content {
+  background-color: #F5F8FF;
+  border: 1px solid #E8EEFF;
+  border-radius: 13.33px;
+  width: 96px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: #023E7D;
+  font-size: 13px;
+}
+
+.btn-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+  margin-right: 7.31px;
+}
+
+.save-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 45px;
+  width: 145.69px;
+  border-radius: 12px;
+  background-color: #023E7D;
+  color: #FFFFFF;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+/* card3 */
+.product-card.size-3 {
+  max-width: 756px;
+  width: 100%;
+  height: 360px;
+}
+
+.pos-3 {
+  top: 13px;
+  right: 11px;
+}
+
+.bottel3-img {
+  position: absolute;
+  top: 30px;
+  left: 19px;
+}
+
+.product3-header {
+  margin: 27px 0 0 87px;
+  max-width: 318px;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: 216px 215.79px 260px;
+  margin: 0 18px 0 14px;
+  gap: 7.96px 16.21px;
+}
+
+.info-pair {
+  display: flex;
+  border: 1px solid #E8EEFF;
+  border-radius: 12px;
+  overflow: hidden;
+  height: 48px;
+  background-color: #fff;
+}
+
+.label {
+  background-color: #F5F8FF;
+  color: #023E7D;
+  border-right: 1px solid #E8EEFF;
+  border-radius: 8.75px;
+  font-weight: 700;
+  font-size: 13.12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  padding: 0 12px;
+}
+
+.label1 {
+  width: 80.02px;
+}
+
+.label2 {
+  width: 70.84px;
+}
+
+.label3 {
+  width: 80.02px;
+}
+
+.label4 {
+  width: 70.84px;
+}
+
+.label5 {
+  width: 80.02px;
+}
+
+.label6 {
+  width: 70.84px;
+}
+
+.label7 {
+  width: 80.02px;
+}
+
+.label8 {
+  width: 70.84px;
+}
+
+.label9 {
+  width: 174.47px;
+}
+
+.value {
+  flex: 1;
+  color: #023E7D;
+  font-weight: 700;
+  font-size: 13.12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom2-buttons {
+  display: flex;
+  margin: 14.96px 18px 15px 14px;
+  gap: 31.68px;
+}
+
+.card-button2 {
+  width: 220.21px;
+  height: 45px;
+  border-radius: 12px;
+  font-weight: 500;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.albardak-btn {
+  width: 80.76px;
+  height: 22.55px;
+  border-radius: 4.59px;
+  border: 1px solid #CCD8E5;
+  background-color: #F4F7FE;
+  color: #023E7D;
+  font-size: 9.84px;
+  font-weight: 700;
+}
+
+/* card4 */
+.product-card.size-4 {
+  max-width: 763px;
+  width: 100%;
+  height: 558px;
+}
+
+.bottel4-img {
+  margin: 25px 0 0 40px;
+}
+
+.product4-header {
+  position: absolute;
+  top: 59px;
+  left: 217px;
+  width: 479px;
+  height: 122px;
+}
+
+.heading {
+  color: #023E7D;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.paragraph {
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.card4-grid {
+  margin: 36.71px 10px 0 10px;
+}
+
+.custom-box {
+  background: #FFFFFF;
+  max-width: 371px;
+  width: 100%;
+  height: 57px;
+  border-radius: 12px;
+  border: 1px solid #E8EEFF;
+  display: flex;
+  align-items: center;
+}
+
+.custom-label {
+  font-weight: 700;
+  font-size: 20px;
+  background-color: #F5F8FF;
+  border: 1px solid #E8EEFF;
+  border-radius: 13.33px;
+  width: 180px;
+  height: 58px;
+  padding: 14px 0 17px 16px;
+  color: #023E7D;
+}
+
+.custom-value {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 20px;
+  color: #023E7D;
+}
+
+.custom-pill-container {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-value-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap:5px;
+  margin: 0 5px 0 15px;
+}
+.up-img{
+  background-color: #D1ECDD;
+  border-radius:50% ;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 27px;
+  height: 27px;
+}
+.green-value{
+  color: #05CD99;
+  font-size: 20px;
+  font-weight: 500;
+}
+.pill {
+  background-color: #F4F7FE;
+  border: 1px solid #CCD8E5;
+  border-radius: 7px;
+  width: 123.41px;
+  height: 34.37px;
+  font-weight: 700;
+  font-size: 15px;
+  color: #023E7D;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gap-y-15 {
+  row-gap: 15.71px;
+}
+
+.card4-grid {
+  display: flex;
+  flex-direction: row;
+  gap: 10px ;
+}
+
+.card4-grid .col {
+  display: flex;
+  flex-direction: column;
+  gap: 15.71px;
+  flex: 1;
+}
+
+
+/* card5 */
+.size-5{
+  max-width: 763px;
+  width: 100%;
+  height: 410px;
+}
+.card5-grid{
+  margin: 35px 20px 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+.custom2-box{
+    background: #FFFFFF;
+  border-radius: 12px;
+  border: 1px solid #E8EEFF;
+  display: flex;
+  align-items: center;
+}
+
+.custom2-box.box-1{
+max-width: 329px;
+  width: 100%;
+  height: 57px;
+}
+
+.custom2-box.box-2{
+max-width: 372px;
+  width: 100%;
+  height: 57px;
+}
+
+.custom-label2 {
+    font-weight: 700;
+  font-size: 20px;
+  background-color: #F5F8FF;
+  border: 1px solid #E8EEFF;
+  border-radius: 13.33px;
+  padding: 14px 0 17px 16px;
+  color: #023E7D;
+}
+
+.custom-label2.lab-1{
+  height: 57px;
+  width: 262px;
+}
+
+.custom-label2.lab-2{
+  height: 57px;
+  width:200px;
+}
+
+.custom2-value-container{
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  gap:5px;
+  margin-left: 8px;
+}
+
+/* card6 */
+.size-6{
+  max-width: 434px;
+  width: 100%;
+  height: 496px;
+  padding: 7px;
+}
+.top-content{
+  display: flex;
+  gap: 11px;
+}
+.time-schedual{
+  width: 234px;
+  height: 40px;
+  border-radius: 9px;
+  border: 1px solid #E8EEFF;
+  background-color: #F5F8FF;
+  display: flex;
+  gap:11px;
+}
+.calender{
+  width: 40px;
+  border-radius: 6px;
+  background-color: #F5F8FF;
+  border: 1px solid #E8EEFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.time-value{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #747C98;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.post-heading{
+  color: #023E7D;
+  font-size: 30px;
+  font-weight: 700;
+}
+.post-para{
+  color: #747C98;
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 0;
+}
+
+.custom-label2.lab-3{
+width: 150px;
+height: 57px;
+padding: 0 7px;
+display: flex;
+align-items: center;
+}
+
+.custom2-box.box-3{
+width: 203px;
+height: 57px;
+}
+
+.botttom-content{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}

@@ -1,16 +1,396 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DataSync</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Datasync</title>
     <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
     <link rel="stylesheet" href="./assets/css/fonts.css" />
+    <link rel="stylesheet" href="./assets/css/layout.css" />
+    <link rel="stylesheet" href="./assets/css/sinkAiChat.css" />
+
 </head>
+
 <body>
-    <div class="container mt-5">
-        <h1 class="text-primary">Hello, Bootstrap with Gilroy!</h1>
-        <p>This text uses the Gilroy font.</p>
-    </div>
+    <header class="header-section">
+        <div class="content">
+            <div class="left-content">
+                <h6>Sayfalar / Performans / Genel Performans</h6>
+                <h4 class="left-title">Genel Performans</h4>
+            </div>
+            <div class="right-content">
+                <div class="profit-btn">
+                    <div class="money-icon">
+                        <img src="./assets/images/dollar.svg" alt="" width="17" height="17">
+                    </div>
+                    <div class="profit-text">39,17</div>
+                    <div class="arrow-icon">
+                        <img src="./assets/images/up-arrow.svg" alt="" width="13" height="15">
+                    </div>
+                </div>
+                <div class="loss-btn">
+                    <div class="money-icon">
+                        <img src="./assets/images/money.svg" alt="" width="12" height="14">
+                    </div>
+                    <div class="profit-text red">43,52</div>
+                    <div class="arrow-icon">
+                        <img src="./assets/images/down-arrow.svg" alt="" width="13" height="15">
+                    </div>
+                </div>
+                <div class="notification" id="notificationToggle">
+                    <div class="notification-icon-wrapper">
+                        <img class="notification-icon" src="./assets/images/notification.svg" alt="" width="20"
+                            height="24">
+                    </div>
+                    <div class="notification-dropdown notification-box" id="notificationBox">
+                        <h6 class="dropdown-title">Bildirimler</h6>
+                        <div class="notification-list">
+                            <div class="d-flex gap-2 align-items-start mb-3">
+                                <img class="bell-icon" src="./assets/images/bell.svg" alt="" height="20" width="17">
+                                <div class="dropdown-text">Lorem ipsum dolor sit amet consectetur.</div>
+                            </div>
+                            <div class="d-flex gap-2 align-items-start  mb-3">
+                                <img class="bell-icon" src="./assets/images/bell.svg" alt="" height="20" width="17">
+                                <div class="dropdown-text">Lorem ipsum dolor sit amet consectetur.</div>
+                            </div>
+                            <div class="d-flex gap-2 align-items-start mb-3">
+                                <img class="bell-icon" src="./assets/images/bell.svg" alt="" height="20" width="17">
+                                <div class="dropdown-text">Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor
+                                    sit
+                                    amet consectetur.</div>
+                            </div>
+                            <div class="d-flex gap-2 align-items-start mb-3">
+                                <img class="bell-icon" src="./assets/images/bell.svg" alt="" height="20" width="17">
+                                <div class="dropdown-text">Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor
+                                    sit
+                                    amet consectetur.</div>
+                            </div>
+                            <div class="d-flex gap-2 align-items-start mb-3">
+                                <img class="bell-icon" src="./assets/images/bell.svg" alt="" height="20" width="17">
+                                <div class="dropdown-text">Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor
+                                    sit
+                                    amet consectetur.</div>
+                            </div>
+
+                        </div>
+                        <hr class="notification-divider" />
+                    </div>
+                </div>
+                <div class="message" id="messageToggle">
+                    <div class="message-icon-wrapper">
+                        <img src="./assets/images/message.svg" alt="" width="20" height="18">
+                    </div>
+                    <div class="message-dropdown" id="messageBox">
+                        <h6 class="dropdown-title2">Mesajlar</h6>
+                        <div class="hover-effect">
+                            <div class="message-list">
+                                <div class="d-flex gap-2 align-items-start mb-3">
+                                    <img src="./assets/images/slider1.svg" alt="" height="45" width="45">
+                                    <div>
+                                        <div class="dropdown-text">Merhabalar ürünümde birinin rengi yanlış gönderilmiş
+                                            değişim talep ettim ancak iki ürünüde göndermem gerekir mi?</div>
+                                        <div class="dropdown-time">23/05/2025 &nbsp; 10:00:59</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="message-list">
+                                <div class="d-flex gap-2 align-items-start mb-3">
+                                    <img src="./assets/images/slider2.svg" alt="" height="45" width="45">
+                                    <div>
+                                        <div class="dropdown-text">Merhaba, mor olanı ne zaman gelecek?</div>
+                                        <div class="dropdown-time">23/05/2025 &nbsp; 10:00:59</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="message-list">
+                                <div class="d-flex gap-2 align-items-start mb-3">
+                                    <img src="./assets/images/slider1.svg" alt="" height="45" width="45">
+                                    <div>
+                                        <div class="dropdown-text">Merhabalar ürünümde birinin rengi yanlış gönderilmiş
+                                            değişim talep ettim ancak iki ürünüde göndermem gerekir mi?</div>
+                                        <div class="dropdown-time">23/05/2025 &nbsp; 10:00:59</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="message-list">
+                                <div class="d-flex gap-2 align-items-start mb-3">
+                                    <img src="./assets/images/slider2.svg" alt="" height="45" width="45">
+                                    <div>
+                                        <div class="dropdown-text">Merhaba, mor olanı ne zaman gelecek?</div>
+                                        <div class="dropdown-time">23/05/2025 &nbsp; 10:00:59</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="notification-divider" />
+                        <button class="view-all-btn">Tüm Mesajlar</button>
+                    </div>
+                </div>
+                <div class="profile-wrapper">
+                    <div class="profile-toggle" id="dropdownToggle" onclick="toggleDropdown()">
+                        <div class="profile-content">
+                            <div class="profile-img">
+                                <img src="./assets/images/profile.svg" alt="" width="41" height="41">
+                            </div>
+                            <div class="profile-text">Berk Uzgören</div>
+                            <div class="dropdown-arrow">
+                                <img src="./assets/images/open-arrow.svg" class="arrow-down" height="7" width="12">
+                                <img src="./assets/images/close-arrow.svg" class="arrow-up" height="7" width="12">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Dropdown menu -->
+                    <div class="dropdown-menu" id="dropdownMenu">
+                        <div class="dropdown-item active">
+                            <div class="item-left">
+                                <img src="./assets/images/user.svg" width="23" height="22" alt="Profile">
+                                <span>Profilimi Düzenle</span>
+                                <img src="./assets/images/right-arrow.svg" class="arrow-icon" width="8" height="12"
+                                    alt="arrow">
+                            </div>
+                        </div>
+
+                        <div class="dropdown-item">
+                            <div class="item-left">
+                                <img src="./assets/images/lock.svg" width="24" height="24" alt="Şifre">
+                                <span class="span-item">Şifre Değiştir</span>
+                                <img src="./assets/images/right-arrow.svg" class="arrow-icon" width="8" height="12"
+                                    alt="arrow">
+                            </div>
+                        </div>
+
+                        <hr />
+
+                        <div class="dropdown-item logout">
+                            <a href="./authpage/login.html">
+                                <img src="./assets/images/logout.svg" width="20" height="20" alt="Logout">
+                                <span>Çıkış Yap</span>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="sidebar-section sink-AI-sidebar">
+        <div class="sidebar-header">
+            <a href="./index.html" class="sidebar-logo">
+                <img src="./assets/images/sidebar/DatasyncLogo.svg" alt="logo" />
+                <img src="./assets/images/sidebar/DatasyncName.svg" alt="logo" />
+            </a>
+        </div>
+        <div class="sidebar-content">
+            <h2 class="sidebar-heading">Sohbetler</h2>
+            <a href="/" class="sidebar-btn"><img src="./assets/images/sidebar/add.svg" alt="logo" /> <span>Yeni Bir
+                    Sohbet
+                    Başlatın</span></a>
+
+            <div class="accordion sidebar-accordion" id="sidebarAccordion">
+
+                <!-- En Son -->
+                <div class="accordion-item bg-transparent border-0">
+                    <h2 class="accordion-header" id="headingPerformance">
+                        <button class="accordion-button collapsed bg-transparent text-white shadow-none" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#collapsePerformance" aria-expanded="false"
+                            aria-controls="collapsePerformance">
+                            <span>
+                                En Son
+                                <span class="subtitle-num">Toplam 12</span>
+                            </span>
+                        </button>
+                    </h2>
+                    <div id="collapsePerformance" class="accordion-collapse collapse"
+                        aria-labelledby="headingPerformance">
+                        <div class="submenu">
+                            <div class="link-btn">
+                                <a href="#"><img src="./assets/images/sidebar/chat.svg" alt="arrow" /> <span>Lorem
+                                        ipsum</span></a>
+                                <div class="edit-btns">
+                                    <a href="#"><img src="./assets/images/sidebar/edit.svg" alt="arrow" /></a>
+                                    <a href="#"><img src="./assets/images/sidebar/delete.svg" alt="arrow" /></a>
+                                    <img src="./assets/images/sidebar/dropdownarrow.svg" alt="arrow" />
+                                </div>
+                            </div>
+                            <div class="link-btn">
+                                <a href="#"><img src="./assets/images/sidebar/chat.svg" alt="arrow" /> <span>Lorem
+                                        ipsum</span></a>
+                                <div class="edit-btns">
+                                    <a href="#"><img src="./assets/images/sidebar/edit.svg" alt="arrow" /></a>
+                                    <a href="#"><img src="./assets/images/sidebar/delete.svg" alt="arrow" /></a>
+                                    <img src="./assets/images/sidebar/dropdownarrow.svg" alt="arrow" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Mayıs -->
+                <div class="accordion-item bg-transparent border-0">
+                    <h2 class="accordion-header" id="headingOperasyon">
+                        <button class="accordion-button collapsed bg-transparent text-white shadow-none" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#collapseOperasyon" aria-expanded="false"
+                            aria-controls="collapseOperasyon">
+                            <span>
+                                Mayıs<span class="subtitle-num">Toplam 12</span></span>
+                        </button>
+                    </h2>
+                    <div id="collapseOperasyon" class="accordion-collapse collapse" aria-labelledby="headingOperasyon">
+                        <div class="submenu">
+                            <div class="link-btn">
+                                <a href="#"><img src="./assets/images/sidebar/chat.svg" alt="arrow" /> <span>Lorem
+                                        ipsum</span></a>
+                                <div class="edit-btns">
+                                    <a href="#"><img src="./assets/images/sidebar/edit.svg" alt="arrow" /></a>
+                                    <a href="#"><img src="./assets/images/sidebar/delete.svg" alt="arrow" /></a>
+                                    <img src="./assets/images/sidebar/dropdownarrow.svg" alt="arrow" />
+                                </div>
+                            </div>
+                            <div class="link-btn">
+                                <a href="#"><img src="./assets/images/sidebar/chat.svg" alt="arrow" /> <span>Lorem
+                                        ipsum</span></a>
+                                <div class="edit-btns">
+                                    <a href="#"><img src="./assets/images/sidebar/edit.svg" alt="arrow" /></a>
+                                    <a href="#"><img src="./assets/images/sidebar/delete.svg" alt="arrow" /></a>
+                                    <img src="./assets/images/sidebar/dropdownarrow.svg" alt="arrow" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Nisan -->
+                <div class="accordion-item bg-transparent border-0">
+                    <h2 class="accordion-header" id="headingSiparis">
+                        <button class="accordion-button collapsed bg-transparent text-white shadow-none" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#collapseSiparis" aria-expanded="false"
+                            aria-controls="collapseSiparis">
+                            <span>
+                                Nisan<span class="subtitle-num">Toplam 12</span></span>
+                        </button>
+                    </h2>
+                    <div id="collapseSiparis" class="accordion-collapse collapse" aria-labelledby="headingSiparis">
+                        <div class="submenu">
+                            <div class="link-btn">
+                                <a href="#"><img src="./assets/images/sidebar/chat.svg" alt="arrow" /> <span>Lorem
+                                        ipsum</span></a>
+                                <div class="edit-btns">
+                                    <a href="#"><img src="./assets/images/sidebar/edit.svg" alt="arrow" /></a>
+                                    <a href="#"><img src="./assets/images/sidebar/delete.svg" alt="arrow" /></a>
+                                    <img src="./assets/images/sidebar/dropdownarrow.svg" alt="arrow" />
+                                </div>
+                            </div>
+                            <div class="link-btn">
+                                <a href="#"><img src="./assets/images/sidebar/chat.svg" alt="arrow" /> <span>Lorem
+                                        ipsum</span></a>
+                                <div class="edit-btns">
+                                    <a href="#"><img src="./assets/images/sidebar/edit.svg" alt="arrow" /></a>
+                                    <a href="#"><img src="./assets/images/sidebar/delete.svg" alt="arrow" /></a>
+                                    <img src="./assets/images/sidebar/dropdownarrow.svg" alt="arrow" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sidebar-footer">
+                <a href="/" class="sidebar-btn-delete">
+                    <img src="./assets/images/sidebar/bin.svg" alt="logo" />
+                    <span>Görüşmeleri Sil</span>
+                </a>
+                <a href="./dashboard/dashboard.html" class="sidebar-btn-logout">
+                    <img src="./assets/images/sidebar/logout.svg" alt="logo" width="15px" height="15px" />
+                    <span>Anasayfa</span>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="main-content sink-ai-content">
+        <div class="sink-AI">
+            <div class="position-relative">
+                <div class="custom-tabs">
+                    <button class="custom-tab-btn" data-bs-target="#sink1">SINK Perakende</button>
+                    <button class="custom-tab-btn" data-bs-target="#sink2">Operasyon Yöneticisi</button>
+                    <button class="custom-tab-btn" data-bs-target="#sink3">Müşteri İlgörüşleri Yöneticisi</button>
+                    <button class="custom-tab-btn" data-bs-target="#sink4">Pazarlama Yöneticisi</button>
+                </div>
+                <div class="speech-bubble-wrapper">
+                    <div class="speech-bubble">
+                        Uygun SINK temsilcisini seçin ve görüşmenize kolaylıkla başlayın.
+                    </div>
+                </div>
+            </div>
+            <!-- Tab Contents -->
+            <div class="tab-content-section">
+                <div id="sink1" class="custom-tab-content">
+                    <section class="chat-section" id="chat-section">
+                    </section>
+                </div>
+                <div id="sink2" class="custom-tab-content">İçerik: Operasyon Yöneticisi</div>
+                <div id="sink3" class="custom-tab-content">İçerik: Müşteri İlgörüşleri Yöneticisi</div>
+                <div id="sink4" class="custom-tab-content">İçerik: Pazarlama Yöneticisi</div>
+            </div>
+            <!-- Message Input -->
+            <div class="message-box-wrapper">
+                <div class="message-box">
+                    <input type="text" id="chat-input" placeholder="SINK’e bir şey sorun..." />
+                    <button class="send-btn" id="send-btn"><img src="./assets/images/sidebar/sendArrow.svg"
+                            alt="icon" /></button>
+                </div>
+                <p class="helper-text">SINK hata yapabilir, lütfen önemli bilgileri kontrol edin.</p>
+            </div>
+            <!-- introduction section -->
+            <div class="intro-section">
+                <div class="w-100 d-flex align-items-start justify-content-center logo-img">
+                    <img src="./assets/images/logo-lg.svg" alt="logo" />
+                </div>
+                <div class="w-100 text-part">
+                    <h3 class="text-center">Bugün size nasıl <span>yardımcı</span> olabilirim?</h3>
+                    <p class="text-center">
+                        Satış, Pazarlama ve diğer tüm konularda uzmanlaşmış yapay zeka SINK’den uzman rehberliği alın.
+                        Yukara alanda yer alan ihtiyaçlarınıza uygun temsilciyi seçin ve görüşmenize kolaylıkla
+                        başlayın.
+                    </p>
+                </div>
+                <div class="section-wrapper">
+                    <!-- Cards -->
+                    <div class="card-grid">
+                        <div class="sink-AI-card">
+                            <div class="card-title">Satış Stratejileri</div>
+                            <div class="card-desc">Ürünlerinizin görünürlüğünü ve satışlarını artırma konusunda özel
+                                tavsiyeler alın.</div>
+                            <div class="card-arrow"><img src="./assets/images/sidebar/tiltArrow.svg" alt="icon" /></div>
+                        </div>
+                        <div class="sink-AI-card">
+                            <div class="card-title">SINK Taktikleri</div>
+                            <div class="card-desc">Anlaşmaları etkili bir şekilde kapatmak için uzman SINK ipuçlarını
+                                öğrenin.</div>
+                            <div class="card-arrow"><img src="./assets/images/sidebar/tiltArrow.svg" alt="icon" /></div>
+                        </div>
+                        <div class="sink-AI-card">
+                            <div class="card-title">Pazarlama İçgörüleri</div>
+                            <div class="card-desc">Ürünlerinizi sergilemek için en iyi pazarlama stratejilerini
+                                keşfedin.
+                            </div>
+                            <div class="card-arrow"><img src="./assets/images/sidebar/tiltArrow.svg" alt="icon" /></div>
+                        </div>
+                        <div class="sink-AI-card">
+                            <div class="card-title">Genel Destek</div>
+                            <div class="card-desc">Başka bir konuda yardıma mı ihtiyacınız var? İsteyin, SINK size
+                                rehberlik
+                                etsin.</div>
+                            <div class="card-arrow"><img src="./assets/images/sidebar/tiltArrow.svg" alt="icon" /></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/jquery-3.6.0.min.js"></script>
+    <script src="./assets/js/dropdown/dropdown.js"></script>
+    <script src="./assets/js/layout/sidebar.js"></script>
+    <script src="./assets/js/sink-chat/sink-chat.js"></script>
 </body>
+
 </html>

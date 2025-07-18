@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datasync Slider</title>
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../assets/css/fonts.css" />
+    <link rel="stylesheet" href="../assets/css/frequentlyslider.css" />
+    <link rel="stylesheet" href="../assets/css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="../assets/css/owl.theme.default.min.css" />
+</head>
+
+<body>
+
+    <div class="frequently-page owl-carousel">
+        <!-- Slide 1 -->
+        <div class="slide-1">
+            <div>
+                <img src="../assets/images/bottel.svg" alt="" width="159" height="220">
+            </div>
+            <div>
+                <h1>1225601</h1>
+                <p>Munchkin Tıklama Kilitli Uçlu Alıştırma Bardağı, 6ay+207ml Yeşil</p>
+            </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="slide-1">
+            <div>
+                <img src="../assets/images/redbottel.svg" alt="">
+            </div>
+            <div>
+                <h1>1225602</h1>
+                <p>Munchkin Tıklama Kilitli Uçlu Alıştırma Bardağı, 6ay+207ml Kırmızı</p>
+            </div>
+        </div>
+        <!-- Slide 1 -->
+        <div class="slide-1">
+            <div>
+                <img src="../assets/images/bottel.svg" alt="" width="159" height="220">
+            </div>
+            <div>
+                <h1>1225601</h1>
+                <p>Munchkin Tıklama Kilitli Uçlu Alıştırma Bardağı, 6ay+207ml Yeşil</p>
+            </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="slide-1">
+            <div>
+                <img src="../assets/images/redbottel.svg" alt="">
+            </div>
+            <div>
+                <h1>1225602</h1>
+                <p>Munchkin Tıklama Kilitli Uçlu Alıştırma Bardağı, 6ay+207ml Kırmızı</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- controls wrapper -->
+    <div class="owl-controls-wrapper">
+        <div class="arrow arrow-left"></div>
+        <div class="dots-wrapper"></div>
+        <div class="arrow arrow-right"></div>
+    </div>
+
+
+    <script src="../assets/js/jquery-3.6.0.min.js"></script>
+    <script src="../assets/js/owl.carousel.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            const $carousel = $(".frequently-page");
+
+            $carousel.owlCarousel({
+                items: 2,
+                slideBy: 1,
+                loop: true,
+                margin: 20,
+                nav: true,
+                dots: true,
+                navText: [
+                    '<img src="../assets/images/left-arrow.svg" />',
+                    '<img src="../assets/images/right-arrow.svg" />'
+                ],
+                onChanged: function (event) {
+                    const index = event.item.index;
+                    $(".slide-1").removeClass("active-item");
+                    $(".frequently-page .owl-item").eq(index).find(".slide-1").addClass("active-item");
+                }
+            });
+
+            // Move arrows and dots to custom places
+            $(".arrow-left").append($(".frequently-page .owl-prev"));
+            $(".arrow-right").append($(".frequently-page .owl-next"));
+            $(".dots-wrapper").append($(".frequently-page .owl-dots"));
+
+            // Set first active item
+            $(".frequently-page .owl-item").eq(0).find(".slide-1").addClass("active-item");
+        });
+    </script>
+
+</body>
+
+</html>
